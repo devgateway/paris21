@@ -19,7 +19,9 @@ gulp.task('copy:index', function() {
 });
 
 gulp.task('copy:static', function() {
-   gulp.src(['app/images/**/*']).pipe(gulp.dest('dist/images'));
+   gulp.src(['app/data/**/*']).pipe(gulp.dest('dist/data'));
+  gulp.src(['app/images/**/*']).pipe(gulp.dest('dist/images'));
+   gulp.src(['app/layers/**/*']).pipe(gulp.dest('dist/layers'));
    gulp.src(['app/favicon.ico']).pipe(gulp.dest('dist'));
  });
 

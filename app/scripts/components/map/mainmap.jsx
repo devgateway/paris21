@@ -16,6 +16,7 @@ const MainMap = React.createClass({
     load();
   },
   render() {
+    debugger;
     return (
       <div className="main-map">
         <div className="map-container">
@@ -25,7 +26,7 @@ const MainMap = React.createClass({
                 <TileLayer url="//{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
             </BoundsMap>
             <div>There are {this.state.education.length} structures loaded</div>
-         </div>
+          </div>
       </div>
     );
   },
