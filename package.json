@@ -5,10 +5,10 @@
   "license": "GPL-3.0",
   "main": "server.js",
   "scripts": {
-    "build": "npm run clean && webpack && npm run _copy-stuff",
-    "clean": "rm -fr dist",
+    "build": "npm run _clean-dist && webpack && npm run _copy-stuff",
+    "_clean-dist": "gulp clean:dist",
     "_copy-index": "gulp copy:index",
-    "_copy-static": "cd app && cp -r favicon.ico images ../dist/",
+    "_copy-static": "gulp copy:static",
     "_copy-stuff": "npm run _copy-index && npm run _copy-static",
     "lint": "npm run lint-scripts && npm run lint-styles",
     "lint-scripts": "eslint 'app/**/*.{es6,js,jsx}'",
@@ -74,11 +74,13 @@
     "style-loader": "0.12.4",
     "webpack": "1.12.1",
     "webpack-dev-server": "1.11.0",
-    "slack-notify":"0.1.4",
-    "react-dom": "0.14.0"
+    "slack-notify": "0.1.4",
+    "react-dom": "0.14.0",
+    "gulp-clean": "0.3.1"
   },
   "dependencies": {
     "classnames": "2.1.3",
+    "del": "^2.0.2",
     "es6-promise": "3.0.2",
     "leaflet": "0.7.5",
     "lodash": "3.10.1",
