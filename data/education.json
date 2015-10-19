@@ -1625,32 +1625,6 @@
         "": " "
     },
     {
-        "PROJECT_ID": "31151401",
-        "TITLE": "Aide de la province du Brabant wallon",
-        "DONOR": "Walloon Official Regional Ministries",
-        "COUNTRY": "Senegal",
-        "SECTOR": "null",
-        "STATUS": "null",
-        "LATITUDE": " ",
-        "LONGITUDE": " ",
-        "GEONAME_ID": " ",
-        "GEONAME": " ",
-        "": " "
-    },
-    {
-        "PROJECT_ID": "35266419",
-        "TITLE": "Aide de la province du Brabant wallon",
-        "DONOR": "Walloon Official Regional Ministries",
-        "COUNTRY": "Senegal",
-        "SECTOR": "null",
-        "STATUS": "null",
-        "LATITUDE": " ",
-        "LONGITUDE": " ",
-        "GEONAME_ID": " ",
-        "GEONAME": " ",
-        "": " "
-    },
-    {
         "PROJECT_ID": "8727451830",
         "TITLE": "UNE JEUNESSE MIEUX EDUQUEE",
         "DONOR": "Agency for International Development",
@@ -2390,8 +2364,5 @@
         "GEONAME_ID": "2251288",
         "GEONAME": "Guérina",
         "": " "
-    },
-    {
-        "PROJECT_ID": ""
     }
 ]
