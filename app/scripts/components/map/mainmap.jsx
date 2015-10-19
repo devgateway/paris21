@@ -12,11 +12,10 @@ const MainMap = React.createClass({
    mixins: [
     connect(Education, 'education'),
   ],
-  componentDidMount() {
+  componentWillMount() {
     load();
   },
   render() {
-    debugger;
     return (
       <div className="main-map">
         <div className="map-container">
@@ -24,9 +23,16 @@ const MainMap = React.createClass({
                 bounds={[[15.71, -19.13], [12.76, -10.43]]}
                 className="leaflet-map">
                 <TileLayer url="//{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
-            </BoundsMap>
-            <div>There are {this.state.education.length} structures loaded</div>
-          </div>
+                
+                {this.state.education.map(edupoint =>
+                  <Marker position={edupoint.position}>
+                  </Marker>
+                )}
+           </BoundsMap>
+           <div className="messages">
+              There are {this.state.education.length} structures loaded.
+           </div>
+         </div>
       </div>
     );
   },
