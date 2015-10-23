@@ -9,3 +9,9 @@ const get = url =>
 
 export const getEducation = () =>
   get(data('education'));
+
+export const getPrimaryGri = () =>
+  get(data('primarygri'));
+
+export const getAdm2 = () =>
+  get(layers('sen_regions'));
