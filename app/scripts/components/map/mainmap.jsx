@@ -1,5 +1,5 @@
 import React, { PropTypes } from 'react';
-import {  Map, TileLayer, Marker } from 'react-leaflet';
+import {  Map, TileLayer, Marker, Popup } from 'react-leaflet';
 import { connect } from 'reflux';
 import BoundsMap from '../leaflet/bounds-map';
 import SpinnerModal from '../misc/spinner-modal';
@@ -23,14 +23,16 @@ const MainMap = React.createClass({
                 bounds={[[15.71, -19.13], [12.76, -10.43]]}
                 className="leaflet-map">
                 <TileLayer url="//{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
-                
-                {this.state.education.map(edupoint =>
-                  <Marker position={edupoint.position}>
-                  </Marker>
-                )}
+                {this.state.education.map(function (item) {
+                  return [
+                   <Marker position={item.position}>
+                      <Popup><span>{item.TITLE}</span></Popup> 
+                   </Marker>
+                   ];
+                })}
            </BoundsMap>
            <div className="messages">
-              There are {this.state.education.length} structures loaded.
+              There are {this.state.education.length} Education structures loaded.
            </div>
          </div>
       </div>
