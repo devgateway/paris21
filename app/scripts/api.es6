@@ -11,7 +11,7 @@ export const getEducation = () =>
   get(data('education'));
 
 export const getPrimaryGri = () =>
-  get(data('primarygri'));
+  get(data('primary_gri'));
 
-export const getAdm2 = () =>
+export const getRegions = () =>
   get(layers('sen_regions'));
