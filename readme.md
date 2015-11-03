@@ -1,8 +1,5 @@
 Paris21 Prototype
 ================
-
-[![Build Status](https://travis-ci.org/WorldBank-Transport/waterdash.svg?branch=master)](https://travis-ci.org/WorldBank-Transport/waterdash)
-
 ## Requirements
 
 * IOJS >= 3 or NodeJS >= 4
