@@ -10,13 +10,6 @@ const statuses = [
   'NO DATA',  // 2
 ];
 
-const statusCategory = {
-  'ACTIVE': 'good',
-  'CLOSED': 'medium',
-  'NO DATA': 'poor',
-};
-
-const statusCatColours = statuses.map(status => colours[statusCategory[status]]);
 
 const ClusteredPoints = React.createClass({
   propTypes: {

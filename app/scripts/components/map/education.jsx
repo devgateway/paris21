@@ -1,6 +1,5 @@
 import React,  { PropTypes } from 'react';
 import T from '../misc/t';
-import mainmap from './mainmap';
 
 const education = React.createClass({
   propTypes: {

@@ -7,7 +7,7 @@ import NotFound from './components/static/not-found.jsx';
 import MainMap from './components/map/mainmap.jsx';
 
 React.render((
-  <Router>  
+  <Router>
     <Route path="/" component={Root}>
     <IndexRoute component={MainMap} />
     <Route path="*" component={NotFound} />
