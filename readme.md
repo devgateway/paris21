@@ -1,5 +1,7 @@
 Paris21 Prototype
 ================
+[![Build Status](https://travis-ci.org/devgateway/paris21.svg?branch=master)](https://travis-ci.org/devgateway/paris21)
+
 ## Requirements
 
 * IOJS >= 3 or NodeJS >= 4
