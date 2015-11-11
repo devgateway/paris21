@@ -4,23 +4,29 @@ import { connect } from 'reflux';
 import BoundsMap from '../leaflet/bounds-map';
 import { load } from '../../actions/education';
 import Education from '../../stores/education';
-import { loadRegions } from '../../actions/regions';
+import { load as loadAgriculture } from '../../actions/agriculture';
+import Agriculture from '../../stores/agriculture';
+import { loadRegions, setYear } from '../../actions/regions';
 import Regions from '../../stores/regions';
 import PrimaryGri from '../../stores/indicators';
 import ClusteredWaterpoints from '../leaflet/clustered-points';
+import YearSelector from './year-selector.jsx';
 
 require('stylesheets/map/map');
 
 const MainMap = React.createClass({
   mixins: [
     connect(Education, 'education'),
+    connect(Agriculture, 'agriculture'),
     connect(Regions, 'regions'),
     connect(PrimaryGri, 'indicators'),
   ],
   componentWillMount() {
     load();
+    loadAgriculture();
     loadRegions();
   },
+
   render() {
     let primaryGriData = <div/>;
     if (this.state.regions.regions) {
@@ -45,16 +51,15 @@ const MainMap = React.createClass({
     return (
       <div className="main-map">
         <div className="map-container">
+           <YearSelector/>
            <BoundsMap
                bounds={[[14.49, -19.13], [12.76, -10.43]]}
                className="leaflet-map">
                 <TileLayer url="//{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
                 <ClusteredWaterpoints points={this.state.education} />
-              {primaryGriData}
+                <ClusteredWaterpoints points={this.state.agriculture} />
+                {primaryGriData}
            </BoundsMap>
-           <div className="messages">
-              Showing Primary GRI - 2010
-           </div>
          </div>
       </div>
     );

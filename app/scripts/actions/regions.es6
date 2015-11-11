@@ -6,6 +6,7 @@ const RegionsActions = createActions({
   loadProgress: {},
   loadRegionsCompleted: {},
   loadRegionsFailed: {},
+  setYear: {},
 });
 
 // SIDE-EFFECT: xhr request is triggered on RegionsActions.loadRegions()
