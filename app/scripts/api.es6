@@ -7,10 +7,13 @@ const get = url =>
   fetch(url).then(resp => resp.json());
 
 export const getEducation = () =>
-	get(data('education'));
+	get(data('agriculture'));
+
+export const getAgriculture = () =>
+	get(data('agriculture'));
 
 export const getPrimaryGri = () =>
-	get(data('primary_gri'));
+	get(data('primary_gir'));
 
 export const getRegions = () =>
 	get(layers('sen_regions'));

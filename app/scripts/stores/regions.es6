@@ -2,31 +2,34 @@ import find from 'lodash/collection/find';
 import forEach from 'lodash/collection/forEach';
 import { createStore } from 'reflux';
 import SaneStore from '../utils/sane-store-mixin';
-import { loadRegionsCompleted } from '../actions/regions';
+import { loadRegionsCompleted, setYear} from '../actions/regions';
 import indicatorStore from './indicators';
 import { loadData } from '../actions/indicators';
 
 const ColorClass = {
   'lessthan45': {
-    'color': '#feedde',
+    'color': '#ece7f2',
   },
-  'lessthan50': {
-    'color': '#fdd0a2',
+  'lessthan55': {
+    'color': '#d0d1e6',
   },
   'lessthan65': {
-    'color': '#fdae6b',
+    'color': '#a6bddb',
   },
   'lessthan75': {
-    'color': '#f16913',
+    'color': '#74a9cf',
   },
   'lessthan85': {
-    'color': '#d94801',
+    'color': '#3690c0',
   },
   'lessthan95': {
-    'color': '#d94801',
+    'color': '#0570b0',
   },
-  'lessthan100': {
-    'color': '#8c2d04',
+  'lessthan105': {
+    'color': '#045a8d',
+  },
+  'lessthan150': {
+    'color': '#023858',
   },
 };
 
@@ -38,8 +41,8 @@ const ColorClass = {
 function getNormalizeValue(value) {
   if (value < 45) {
     return ColorClass.lessthan45.color;
-  } else if (value < 50) {
-    return ColorClass.lessthan50.color;
+  } else if (value < 55) {
+    return ColorClass.lessthan55.color;
   } else if (value < 65) {
     return ColorClass.lessthan65.color;
   } else if (value < 75) {
@@ -48,8 +51,10 @@ function getNormalizeValue(value) {
     return ColorClass.lessthan85.color;
   } else if (value < 95) {
     return ColorClass.lessthan95.color;
+  } else if (value < 105) {
+    return ColorClass.lessthan105.color;
   } else {
-    return ColorClass.lessthan100.color;
+    return ColorClass.lessthan150.color;
   }
 }
 
@@ -59,20 +64,20 @@ function getNormalizeValue(value) {
  * @param {[type]} indicators [description]
  * @return {[type]}       [description]
  */
-function setStyle(features, indicators) {
+function setStyle(features, indicators, year) {
   forEach(features.features, function(feature) {
     const values = find(indicators.indicators, function(item) {
       return (item.REGION === feature.properties.NAME_1);
     });
 
     if (values) {
-      const color = getNormalizeValue(values[2010]);
+      const color = getNormalizeValue(values[year]);
       feature.style = {
         weight: 2,
         opacity: 0.1,
         color: 'white',
         dashArray: '3',
-        fillOpacity: 0.7,
+        fillOpacity: 0.8,
         fillColor: color};
     } else {
       feature.style = {
@@ -92,10 +97,14 @@ const RegionsStore = createStore({
   mixins: [SaneStore],
   init() {
     this.listenTo(loadRegionsCompleted, 'loadRegions');
+    this.listenTo(setYear, 'updateFeatures');
     this.listenTo(indicatorStore, 'updateFeatures');
   },
-  updateFeatures(indicators) {
-    const processed = setStyle(this.data.regions, indicators);
+  updateFeatures(indicators = this.indicators, year = 2010) {
+    if (indicators){
+      this.indicators = indicators;
+    }
+    const processed = setStyle(this.data.regions, this.indicators, year);
     /* Force map to remove the initial layer*/
     this.setData({regions: null});
     this.setData({regions: processed});
