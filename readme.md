@@ -1,7 +1,7 @@
 Paris21 Prototype
 ================
 
-[![Build Status](https://travis-ci.org/WorldBank-Transport/waterdash.svg?branch=master)](https://travis-ci.org/WorldBank-Transport/waterdash)
+[![Build Status](https://travis-ci.org/devgateway/paris21.svg?branch=master)](https://travis-ci.org/devgateway/paris21)
 
 ## Requirements
 
@@ -46,4 +46,8 @@ $ npm run lint
 
 ```bash
 $ npm run test-only
+```
+#### Publish gh-pages
+```bash
+$ npm run deploy
 ```
