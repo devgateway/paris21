@@ -15,7 +15,8 @@
     "lint-styles": "gulp lint-styles",
     "start": "node server.js",
     "test": "npm run lint && npm run test-only",
-    "test-only": "jest"
+    "test-only": "jest",
+    "deploy" : "gulp deploy"
   },
   "jest": {
     "scriptPreprocessor": "<rootDir>/jest-preprocessor.js",

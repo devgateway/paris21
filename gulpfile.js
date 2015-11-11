@@ -2,6 +2,7 @@ const gulp = require('gulp');
 const sassLint = require('gulp-sass-lint');
 const inject = require('gulp-inject');
 const clean = require('gulp-clean');
+const ghPages = require('gulp-gh-pages');
 
 gulp.task('lint-styles', function() {
   gulp.src('app/stylesheets/**/*.scss')
@@ -33,4 +34,9 @@ gulp.task('clean:dist', function () {
 gulp.task('cp:dist', function () {
     return gulp.src('dist', {read: false})
         .pipe(clean());
+});
+
+gulp.task('deploy', function() {
+  return gulp.src('./dist/**/*')
+    .pipe(ghPages());
 });
