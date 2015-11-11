@@ -6,7 +6,7 @@ import { load } from '../../actions/education';
 import Education from '../../stores/education';
 import { load as loadAgriculture } from '../../actions/agriculture';
 import Agriculture from '../../stores/agriculture';
-import { loadRegions, setYear } from '../../actions/regions';
+import { loadRegions } from '../../actions/regions';
 import Regions from '../../stores/regions';
 import PrimaryGri from '../../stores/indicators';
 import ClusteredWaterpoints from '../leaflet/clustered-points';

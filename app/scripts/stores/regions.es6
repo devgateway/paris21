@@ -62,6 +62,7 @@ function getNormalizeValue(value) {
  * [setStyle description]
  * @param {[type]} features   [description]
  * @param {[type]} indicators [description]
+ * @param {[type]} year       [description]
  * @return {[type]}       [description]
  */
 function setStyle(features, indicators, year) {
@@ -101,7 +102,7 @@ const RegionsStore = createStore({
     this.listenTo(indicatorStore, 'updateFeatures');
   },
   updateFeatures(indicators = this.indicators, year = 2010) {
-    if (indicators){
+    if (indicators) {
       this.indicators = indicators;
     }
     const processed = setStyle(this.data.regions, this.indicators, year);
