@@ -1,6 +1,7 @@
 Paris21 Prototype
 ================
-[![Build Status](https://travis-ci.org/devgateway/paris21.svg?branch=master)](https://travis-ci.org/devgateway/paris21)
+
+[![Build Status](https://travis-ci.org/WorldBank-Transport/waterdash.svg?branch=master)](https://travis-ci.org/WorldBank-Transport/waterdash)
 
 ## Requirements
 
