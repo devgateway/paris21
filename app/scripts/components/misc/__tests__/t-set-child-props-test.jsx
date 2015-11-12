@@ -11,7 +11,7 @@ describe('Translator component wrapper', () => {
   it('should put translated props on its child', () => {
     const ts = React.addons.TestUtils.renderIntoDocument(
       <TS>
-        <img alt={{k: 'site-name'}} />
+        <img alt={{k: 'site.flag'}} />
       </TS>
     );
     const img = React.addons.TestUtils.findRenderedDOMComponentWithTag(ts, 'img');

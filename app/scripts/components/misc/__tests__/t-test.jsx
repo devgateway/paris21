@@ -13,16 +13,7 @@ describe('Translator component', () => {
   });
 
   it('should render the translated string', () => {
-    const t = React.addons.TestUtils.renderIntoDocument(<T k="site-name" />);
+    const t = React.addons.TestUtils.renderIntoDocument(<T k="site.flag" />);
     expect(React.findDOMNode(t).textContent).toEqual('Paris21');
   });
-
-  it('should interpolate the translated string', () => {
-    const t = React.addons.TestUtils.renderIntoDocument(
-      <T i={['test']} k="error.api.ckan.record-missing-field" />
-    );
-    expect(React.findDOMNode(t).textContent)
-      .toEqual('A record from the CKAN data server was missing the field \'test\'');
-  });
-
 });

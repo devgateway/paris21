@@ -14,7 +14,6 @@ const allTranslations = {
 
     'nav.home': 'Home',
     'nav.data': 'Data',
-    
     'lang.en': 'English',
     'lang.fr': 'Français',
   },
@@ -22,10 +21,8 @@ const allTranslations = {
   'fr': {
     'site-name': '',
     'site.flag': '',
-
     'nav.home': 'Accueil',
     'nav.data': 'Données',
-    
     'lang.en': 'English',
     'lang.fr': 'Français',
   },
