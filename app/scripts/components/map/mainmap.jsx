@@ -2,28 +2,25 @@ import React from 'react';
 import { TileLayer, GeoJson } from 'react-leaflet';
 import { connect } from 'reflux';
 import BoundsMap from '../leaflet/bounds-map';
-import { load } from '../../actions/education';
-import Education from '../../stores/education';
-import { load as loadAgriculture } from '../../actions/agriculture';
-import Agriculture from '../../stores/agriculture';
+import { load } from '../../actions/structures';
+import Structures from '../../stores/structures';
 import { loadRegions } from '../../actions/regions';
 import Regions from '../../stores/regions';
 import PrimaryGri from '../../stores/indicators';
 import ClusteredWaterpoints from '../leaflet/clustered-points';
-import YearSelector from './year-selector.jsx';
+import IndicatorSelector from './indicatorselector.jsx';
+import YearSelector from './yearselector.jsx';
 
 require('stylesheets/map/map');
 
 const MainMap = React.createClass({
   mixins: [
-    connect(Education, 'education'),
-    connect(Agriculture, 'agriculture'),
+    connect(Structures, 'structures'),
     connect(Regions, 'regions'),
     connect(PrimaryGri, 'indicators'),
   ],
   componentWillMount() {
     load();
-    loadAgriculture();
     loadRegions();
   },
 
@@ -51,13 +48,15 @@ const MainMap = React.createClass({
     return (
       <div className="main-map">
         <div className="map-container">
-           <YearSelector/>
+           <div className="messages">
+            <IndicatorSelector/>
+            <YearSelector/>
+          </div>
            <BoundsMap
                bounds={[[14.49, -19.13], [12.76, -10.43]]}
                className="leaflet-map">
                 <TileLayer url="//{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
-                <ClusteredWaterpoints points={this.state.education} />
-                <ClusteredWaterpoints points={this.state.agriculture} />
+                <ClusteredWaterpoints points={this.state.structures}/>
                 {primaryGriData}
            </BoundsMap>
          </div>

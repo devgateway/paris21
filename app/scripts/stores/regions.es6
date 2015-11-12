@@ -7,29 +7,35 @@ import indicatorStore from './indicators';
 import { loadData } from '../actions/indicators';
 
 const ColorClass = {
-  'lessthan45': {
-    'color': '#ece7f2',
+  'lessthan5': {
+    'color': '#67001f',
   },
-  'lessthan55': {
-    'color': '#d0d1e6',
+  'lessthan10': {
+    'color': '#b2182b',
   },
-  'lessthan65': {
-    'color': '#a6bddb',
+  'lessthan20': {
+    'color': '#d6604d',
   },
-  'lessthan75': {
-    'color': '#74a9cf',
+  'lessthan30': {
+    'color': '#f4a582',
   },
-  'lessthan85': {
-    'color': '#3690c0',
+  'lessthan40': {
+    'color': '#fddbc7',
   },
-  'lessthan95': {
-    'color': '#0570b0',
+  'lessthan50': {
+    'color': '#f7f7f7',
   },
-  'lessthan105': {
-    'color': '#045a8d',
+  'lessthan60': {
+    'color': '#92c5de',
   },
-  'lessthan150': {
-    'color': '#023858',
+  'lessthan70': {
+    'color': '#4393c3',
+  },
+  'lessthan80': {
+    'color': '#2166ac',
+  },
+  'other': {
+    'color': '#053061',
   },
 };
 
@@ -39,22 +45,26 @@ const ColorClass = {
  * @return {[type]}       [description]
  */
 function getNormalizeValue(value) {
-  if (value < 45) {
-    return ColorClass.lessthan45.color;
-  } else if (value < 55) {
-    return ColorClass.lessthan55.color;
-  } else if (value < 65) {
-    return ColorClass.lessthan65.color;
-  } else if (value < 75) {
-    return ColorClass.lessthan75.color;
-  } else if (value < 85) {
-    return ColorClass.lessthan85.color;
-  } else if (value < 95) {
-    return ColorClass.lessthan95.color;
-  } else if (value < 105) {
-    return ColorClass.lessthan105.color;
+  if (value < 5) {
+    return ColorClass.lessthan5.color;
+  } else if (value < 10) {
+    return ColorClass.lessthan10.color;
+  } else if (value < 20) {
+    return ColorClass.lessthan20.color;
+  } else if (value < 30) {
+    return ColorClass.lessthan30.color;
+  } else if (value < 40) {
+    return ColorClass.lessthan40.color;
+  } else if (value < 50) {
+    return ColorClass.lessthan50.color;
+  } else if (value < 60) {
+    return ColorClass.lessthan60.color;
+  } else if (value < 70) {
+    return ColorClass.lessthan70.color;
+  } else if (value < 80) {
+    return ColorClass.lessthan80.color;
   } else {
-    return ColorClass.lessthan150.color;
+    return ColorClass.other.color;
   }
 }
 
