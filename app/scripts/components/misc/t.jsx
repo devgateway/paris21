@@ -9,8 +9,8 @@ import langStore from '../../stores/lang';
 
 const allTranslations = {
   'en': {
-    'site-name': 'Water Dashboard',
-    'site.flag': 'Flag of Tanzania',
+    'site-name': 'Paris21',
+    'site.flag': '',
 
     'nav.home': 'Home',
     'nav.data': 'Data',

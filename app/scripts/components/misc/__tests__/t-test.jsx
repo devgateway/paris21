@@ -14,7 +14,7 @@ describe('Translator component', () => {
 
   it('should render the translated string', () => {
     const t = React.addons.TestUtils.renderIntoDocument(<T k="site-name" />);
-    expect(React.findDOMNode(t).textContent).toEqual('Water Dashboard');
+    expect(React.findDOMNode(t).textContent).toEqual('Paris21');
   });
 
   it('should interpolate the translated string', () => {
