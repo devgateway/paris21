@@ -18,7 +18,7 @@ const LanguageSelector = React.createClass({
     setLanguage(langKey);
   },
 
-  langKeys: ['en', 'sw-tz'],
+  langKeys: ['en', 'fr'],
 
   render() {
     return (

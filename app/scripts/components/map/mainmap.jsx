@@ -53,7 +53,7 @@ const MainMap = React.createClass({
             <YearSelector/>
           </div>
            <BoundsMap
-               bounds={[[14.49, -19.13], [12.76, -10.43]]}
+               bounds={[[16.00, -21.13], [12.76, -10.43]]}
                className="leaflet-map">
                 <TileLayer url="//{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
                 <ClusteredWaterpoints points={this.state.structures}/>
