@@ -8,10 +8,30 @@
   color: $bg-color;
   padding-left: $header-common-margin;
   padding-right: $header-common-margin;
+  font-size: 16px;
 
   a {
     color: $bg-color;
   }
+
+  select {
+   width: 268px;
+   margin-left:4px;
+   padding: 5px;
+   font-size: 16px;
+   line-height: 1;
+   border: 0;
+   border-radius: 0;
+   height: 34px;
+   -webkit-appearance: none;
+   } 
+
+   select.decorated option:hover {
+    box-shadow: 0 0 10px 100px #ffc2b3 inset; 
+  }
+   option {
+    background: white;
+   }
 
   .footer-nav {
     float: left;
@@ -25,4 +45,5 @@
     text-align: right;
     width: 40%;
   }
+ 
 }

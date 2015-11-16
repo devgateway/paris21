@@ -8,8 +8,6 @@ import { loadRegions } from '../../actions/regions';
 import Regions from '../../stores/regions';
 import PrimaryGri from '../../stores/indicators';
 import ClusteredWaterpoints from '../leaflet/clustered-points';
-import IndicatorSelector from './indicatorselector.jsx';
-import YearSelector from './yearselector.jsx';
 
 require('stylesheets/map/map');
 
@@ -48,10 +46,6 @@ const MainMap = React.createClass({
     return (
       <div className="main-map">
         <div className="map-container">
-           <div className="messages">
-            <IndicatorSelector/>
-            <YearSelector/>
-          </div>
            <BoundsMap
                bounds={[[16.00, -21.13], [12.76, -10.43]]}
                className="leaflet-map">
