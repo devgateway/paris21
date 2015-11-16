@@ -16,13 +16,11 @@ const allTranslations = {
     'nav.data': 'Data',
     'lang.en': 'English',
     'lang.fr': 'Français',
-    
-    'footer.years' : 'Select Year',
-    'footer.indicator' : 'Select an Indicator',
-    
-    'indicator.primary-GIR-boys' : 'Primary GIR Boys',
-    'indicator.primary-GIR-girls' : 'Primary GIR Boys', 
-    'indicator.primary-GIR-total' : 'Primary GIR Boys',
+    'footer.years': 'Select Year',
+    'footer.indicator': 'Select an Indicator',
+    'indicator.primary-GIR-boys': 'Primary GIR Boys',
+    'indicator.primary-GIR-girls': 'Primary GIR Boys',
+    'indicator.primary-GIR-total': 'Primary GIR Boys',
   },
 
   'fr': {
@@ -32,13 +30,11 @@ const allTranslations = {
     'nav.data': 'Données',
     'lang.en': 'English',
     'lang.fr': 'Français',
-    
-    'footer.years' : 'Sélectionnez Année',
-    'footer.indicator' : 'Sélectionnez un indicateur',
-
-    'indicator.primary-GIR-boys' : 'Primary GIR Boys',
-    'indicator.primary-GIR-girls' : 'Primary GIR Boys', 
-    'indicator.primary-GIR-total' : 'Primary GIR Boys',
+    'footer.years': 'Sélectionnez Année',
+    'footer.indicator': 'Sélectionnez un indicateur',
+    'indicator.primary-GIR-boys': 'Primary GIR Boys',
+    'indicator.primary-GIR-girls': 'Primary GIR Boys',
+    'indicator.primary-GIR-total': 'Primary GIR Boys',
   },
 };
 

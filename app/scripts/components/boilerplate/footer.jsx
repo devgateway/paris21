@@ -1,6 +1,5 @@
 import React from 'react';
 import T from '../misc/t';
-import OpenDataNav from './nav';
 import YearSelector from '../map/yearselector.jsx';
 import IndicatorSelector from '../map/indicatorselector.jsx';
 
