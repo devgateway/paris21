@@ -1,5 +1,6 @@
 import React from 'react';
 import { setYear } from '../../actions/regions';
+
 const yearSelector = React.createClass({
 
   getInitialState() {
@@ -9,13 +10,14 @@ const yearSelector = React.createClass({
   },
 
   change(event) {
+    event.preventDefault();
     this.state.value = event.target.value;
     setYear(null, event.target.value);
   },
 
   render() {
     return (
-         <select className="selectable" id="year" onChange={this.change} value={this.state.value} >
+         <select className="selectable" id="year" onChange={this.change} value={this.state.value}>
               <option value="2010">2010</option>
               <option value="2011">2011</option>
               <option value="2012">2012</option>

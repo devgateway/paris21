@@ -13,11 +13,6 @@ const OpenDataNav = React.createClass({
             <T k="nav.home" />
           </Link>
         </li>
-        <li>
-          <Link activeClassName="active" to="/data/">
-            <T k="nav.data" />
-          </Link>
-        </li>
       </ul>
     );
   },
