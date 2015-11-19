@@ -8,6 +8,7 @@ import { loadRegions } from '../../actions/regions';
 import Regions from '../../stores/regions';
 import PrimaryGri from '../../stores/indicators';
 import ClusteredWaterpoints from '../leaflet/clustered-points';
+import Legend from './legend';
 
 require('stylesheets/map/map');
 
@@ -52,6 +53,7 @@ const MainMap = React.createClass({
                 <TileLayer url="//{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
                 <ClusteredWaterpoints points={this.state.structures}/>
                 {primaryGriData}
+                <Legend/>
            </BoundsMap>
          </div>
       </div>

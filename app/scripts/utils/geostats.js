@@ -173,11 +173,11 @@ if (!Array.prototype.indexOf) {
 		this.counter = new Array();
 		
 		// we init counter with 0 value
-		for(i = 0; i < this.bounds.length -1; i++) {
+		for(var i = 0; i < this.bounds.length -1; i++) {
 			this.counter[i]= 0;
 		}
 		
-		for(j=0; j < tmp.length; j++) {
+		for(var j=0; j < tmp.length; j++) {
 			
 			// get current class for value to increment the counter
 			var cclass = this.getClass(tmp[j]);
@@ -287,7 +287,7 @@ if (!Array.prototype.indexOf) {
 		if (this.stat_sum  == null) {
 			
 			this.stat_sum = 0;
-			for (i = 0; i < this.pop(); i++) {
+			for (var i = 0; i < this.pop(); i++) {
 				this.stat_sum += parseFloat(this.serie[i]);
 			}
 			
@@ -434,7 +434,7 @@ if (!Array.prototype.indexOf) {
 	/** check if the serie contains negative value */
 	this._hasNegativeValue = function() {
 		
-		for (i = 0; i < this.serie.length; i++) {
+		for (var i = 0; i < this.serie.length; i++) {
 	    	if(this.serie[i] < 0)
 	    		return true;
 	    }
@@ -445,7 +445,7 @@ if (!Array.prototype.indexOf) {
 	/** check if the serie contains zero value */
 	this._hasZeroValue = function() {
 		
-		for (i = 0; i < this.serie.length; i++) {
+		for (var i = 0; i < this.serie.length; i++) {
 	    	if(parseFloat(this.serie[i]) === 0)
 	    		return true;
 	    }
@@ -534,7 +534,7 @@ if (!Array.prototype.indexOf) {
 	    var val = tmpMin;
 	    var interval = (tmpMax - tmpMin) / nbClass;
 
-	    for (i = 0; i <= nbClass; i++) {
+	    for (var i = 0; i <= nbClass; i++) {
 	        a[i] = val;
 	        val += interval;
 	    }
@@ -619,13 +619,13 @@ if (!Array.prototype.indexOf) {
 	    	a[supBound] = this.mean() + ( this.stddev() / 2);
 	    	
 	    	// Values < to infBound, except first one
-	    	for (i = infBound - 1; i > 0; i--) {
+	    	for (var i = infBound - 1; i > 0; i--) {
 	    		var val = a[i+1] - this.stddev();
 		        a[i] = val;
 		    }
 	    	
 	    	// Values > to supBound, except last one
-	    	for (i = supBound + 1; i < nbClass; i++) {
+	    	for (var i = supBound + 1; i < nbClass; i++) {
 	    		var val = a[i-1] + this.stddev();
 		        a[i] = val;
 		    }
@@ -639,13 +639,13 @@ if (!Array.prototype.indexOf) {
 	    	a[meanBound] = this.mean();
 	    	
 	    	// Values < to the mean, except first one
-	    	for (i = meanBound - 1; i > 0; i--) {
+	    	for (var i = meanBound - 1; i > 0; i--) {
 	    		var val = a[i+1] - this.stddev();
 		        a[i] = val;
 		    }
 	    	
 	    	// Values > to the mean, except last one
-	    	for (i = meanBound + 1; i < nbClass; i++) {
+	    	for (var i = meanBound + 1; i < nbClass; i++) {
 	    		var val = a[i-1] + this.stddev();
 		        a[i] = val;
 		    }
@@ -697,7 +697,7 @@ if (!Array.prototype.indexOf) {
 	    var interval = (logMax - logMin) / nbClass;
 	    
 	    // we compute log bounds
-	    for (i = 0; i < nbClass; i++) {
+	    for (var i = 0; i < nbClass; i++) {
 	    	if(i == 0) {
 	    		a[i] = logMin;
 	    	} else {
@@ -734,7 +734,7 @@ if (!Array.prototype.indexOf) {
 	    var denominator = 0;
 	    
 	    // we compute the (french) "Raison"
-	    for (i = 1; i <= nbClass; i++) {
+	    for (var i = 1; i <= nbClass; i++) {
 	        denominator += i;
 	    }
 
@@ -744,7 +744,7 @@ if (!Array.prototype.indexOf) {
 	    
 	    var interval = (tmpMax - tmpMin) / denominator;
 
-	    for (i = 0; i <= nbClass; i++) {
+	    for (var i = 0; i <= nbClass; i++) {
 	    	if(i == 0) {
 	    		a[i] = tmpMin;
 	    	} else {
@@ -843,7 +843,7 @@ if (!Array.prototype.indexOf) {
 		var kclass = []
 
 		// fill the kclass (classification) array with zeros:
-		for (i = 0; i <= nbClass; i++) {
+		for (var i = 0; i <= nbClass; i++) {
 			kclass.push(0);
 		}
 
@@ -894,7 +894,7 @@ if (!Array.prototype.indexOf) {
 
 		var a = Array();
 
-		for (i = 0; i < this.pop(); i++) {
+		for (var i = 0; i < this.pop(); i++) {
 			if(a.indexOf(tmp[i]) === -1)
 				a.push(tmp[i]);
 		}
@@ -952,7 +952,7 @@ if (!Array.prototype.indexOf) {
 		
 		var bounds, i;
 
-		for (i = 0; i < this.ranges.length; i++) {
+		for (var i = 0; i < this.ranges.length; i++) {
 			bounds = this.ranges[i].split(/ - /);
 			if (value <= parseFloat(bounds[1])) {
 				return i;
@@ -978,7 +978,7 @@ if (!Array.prototype.indexOf) {
 		
 		var cnt = 1; // bounds array counter
 		
-		for (i = 0; i < tmp.length; i++) {
+		for (var i = 0; i < tmp.length; i++) {
 			
 			if(i == 0) var range_firstvalue = tmp[i]; // we init first range value
 			
@@ -1032,7 +1032,12 @@ if (!Array.prototype.indexOf) {
 		var elements = new Array();
 		
 		this.doCount(); // we do count, even if not displayed
-		
+		var lg;
+		var ccolors;
+		var getcounter;
+		var fn;
+		var mode;
+
 		if(colors != null) {
 			ccolors = colors;
 		}
@@ -1083,7 +1088,7 @@ if (!Array.prototype.indexOf) {
 		
 		if(this.is_uniqueValues == false) {
 			
-			for (i = 0; i < (this.ranges.length); i++) {
+			for (var i = 0; i < (this.ranges.length); i++) {
 				if(getcounter===true) {
 					cnt = ' <span class="geostats-legend-counter">(' + this.counter[i] + ')</span>';
 				}
@@ -1133,7 +1138,7 @@ if (!Array.prototype.indexOf) {
 		} else {
 			
 			// only if classification is done on unique values
-			for (i = 0; i < (this.bounds.length); i++) {
+			for (var i = 0; i < (this.bounds.length); i++) {
 				if(getcounter===true) {
 					cnt = ' <span class="geostats-legend-counter">(' + this.counter[i] + ')</span>';
 				}
@@ -1150,7 +1155,7 @@ if (!Array.prototype.indexOf) {
 		
 		// finally we create HTML and return it
 		var content  = '<div class="geostats-legend"><div class="geostats-legend-title">' + _t(lg) + '</div>';
-		for (i = 0; i < (elements.length); i++) {
+		for (var i = 0; i < (elements.length); i++) {
 			content += elements[i];
 		}
 		content += '</div>';

@@ -35,7 +35,7 @@ function setStyle(features, indicators, year) {
   });
 
   gs = new geostats(values);
-  gs.getClassJenks(6);
+  const jenks = gs.getClassJenks(6);
 
 
   forEach(features.features, function(feature) {
@@ -64,6 +64,8 @@ function setStyle(features, indicators, year) {
         fillColor: '#7a859c'};
     }
   });
+  features.jenks = jenks;
+  features.colors = Colors;
   return features;
 }
 

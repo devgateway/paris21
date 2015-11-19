@@ -21,6 +21,7 @@ const allTranslations = {
     'indicator.primary-GIR-boys': 'Primary GIR Boys',
     'indicator.primary-GIR-girls': 'Primary GIR Boys',
     'indicator.primary-GIR-total': 'Primary GIR Boys',
+    'legend.title': 'Legend',
   },
 
   'fr': {
@@ -35,6 +36,7 @@ const allTranslations = {
     'indicator.primary-GIR-boys': 'Primary GIR Boys',
     'indicator.primary-GIR-girls': 'Primary GIR Boys',
     'indicator.primary-GIR-total': 'Primary GIR Boys',
+    'legend.title': 'Légende',
   },
 };
 
