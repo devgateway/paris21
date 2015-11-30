@@ -9,9 +9,11 @@ const Logo = React.createClass({
     return (
       <div className="logo">
         <TChildProps>
-          <img alt={{k: 'site.flag'}} src="images/logo.jpg"/>
+          <img alt={{k: 'site.flag'}} src="images/flag.png"/>
         </TChildProps>
-        <h1><T k="site-name" /></h1>
+         <h1>
+          <T k="site-name" />
+        </h1>
       </div>
     );
   },

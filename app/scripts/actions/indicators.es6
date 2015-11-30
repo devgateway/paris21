@@ -1,6 +1,7 @@
 import { createActions } from 'reflux';
 import { getIndicator } from '../api';
 
+let INDICATOR_NAME = '';
 const indicatorsActions = createActions({
   loadData: {},
   loadProgress: {},
@@ -8,8 +9,6 @@ const indicatorsActions = createActions({
   loadDataFailed: {},
   updateIndicator: {},
 });
-
-let INDICATOR_NAME = 'primary_gir_total';
 
 /**
  * [description]

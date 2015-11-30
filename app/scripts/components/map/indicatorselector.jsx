@@ -1,15 +1,23 @@
 import React from 'react';
+import { connect } from 'reflux';
 import { updateIndicator } from '../../actions/indicators';
+import Indicators from '../../stores/indicators';
 
 const IndicatorSelector = React.createClass({
 
+  mixins: [
+    connect(Indicators, 'indicators'),
+  ],
+
   getInitialState() {
+    updateIndicator('primary_gir_total');
     return {
       value: 'primary_gir_total',
     };
   },
 
   change(event) {
+    event.preventDefault();
     this.state.value = event.target.value;
     updateIndicator(event.target.value);
   },

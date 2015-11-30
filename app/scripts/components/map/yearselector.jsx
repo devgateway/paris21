@@ -1,7 +1,14 @@
 import React from 'react';
+import { connect } from 'reflux';
+import selectYear  from '../../actions/years';
 import { setYear } from '../../actions/regions';
+import Years from '../../stores/years';
 
 const yearSelector = React.createClass({
+
+  mixins: [
+    connect(Years, 'years'),
+  ],
 
   getInitialState() {
     return {
@@ -11,13 +18,13 @@ const yearSelector = React.createClass({
 
   change(event) {
     event.preventDefault();
-    this.state.value = event.target.value;
+    selectYear(event.target.value);
     setYear(null, event.target.value);
   },
 
   render() {
     return (
-         <select className="selectable" id="year" onChange={this.change} value={this.state.value}>
+         <select className="selectable" id="year" onChange={this.change} value={this.state.years}>
               <option value="2010">2010</option>
               <option value="2011">2011</option>
               <option value="2012">2012</option>
