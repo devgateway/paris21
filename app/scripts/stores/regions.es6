@@ -37,35 +37,36 @@ function setStyle(features, indicators, year) {
   gs = new geostats(values);
   const jenks = gs.getClassJenks(6);
 
+  if (features) {
+    forEach(features.features, function(feature) {
+      let index;
+      const found = find(regions, function(item, key) {
+        index = key;
+        return (item === feature.properties.NAME_1);
+      });
 
-  forEach(features.features, function(feature) {
-    let index;
-    const found = find(regions, function(item, key) {
-      index = key;
-      return (item === feature.properties.NAME_1);
+      if (found) {
+        const color = getColor(values[index]);
+        feature.style = {
+          weight: 2,
+          opacity: 0.1,
+          color: 'white',
+          dashArray: '3',
+          fillOpacity: 0.8,
+          fillColor: color};
+      } else {
+        feature.style = {
+          weight: 2,
+          opacity: 0.5,
+          color: 'white',
+          dashArray: '3',
+          fillOpacity: 1,
+          fillColor: '#7a859c'};
+      }
     });
-
-    if (found) {
-      const color = getColor(values[index]);
-      feature.style = {
-        weight: 2,
-        opacity: 0.1,
-        color: 'white',
-        dashArray: '3',
-        fillOpacity: 0.8,
-        fillColor: color};
-    } else {
-      feature.style = {
-        weight: 2,
-        opacity: 0.5,
-        color: 'white',
-        dashArray: '3',
-        fillOpacity: 1,
-        fillColor: '#7a859c'};
-    }
-  });
-  features.jenks = jenks;
-  features.colors = Colors;
+    features.jenks = jenks;
+    features.colors = Colors;
+  }
   return features;
 }
 

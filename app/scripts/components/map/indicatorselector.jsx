@@ -25,6 +25,9 @@ const IndicatorSelector = React.createClass({
   render() {
     return (
             <select className="selectable" id="year" onChange={this.change} value={this.state.value} >
+              <option value="secondary_ger_total">Secondary TBPS Boys</option>
+              <option value="secondary_ger_girls">Secondary TBPS Girls</option>
+              <option value="secondary_ger_boys">Secondary TBPS Total</option>
               <option value="primary_gir_total">Primary GIR Boys</option>
               <option value="primary_gir_boys">Primary GIR Girls</option>
               <option value="primary_gir_girls">Primary GIR Total</option>
@@ -34,7 +37,7 @@ const IndicatorSelector = React.createClass({
               <option value="presc_tbps_boys">Preschool TBPS Boys</option>
               <option value="presc_tbps_girls">Preschool TBPS Girls</option>
               <option value="presc_tbps_total">Preschool TBPS Total</option>
-           </select>
+            </select>
       );
   },
 });
