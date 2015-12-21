@@ -5,7 +5,7 @@ import legendStore from '../../stores/legend';
 
 require('stylesheets/misc/legend');
 
-const legend = React.createClass({
+const Legend = React.createClass({
 
   mixins: [
     connect(legendStore, 'legend'),
@@ -43,5 +43,5 @@ const legend = React.createClass({
   },
 });
 
-export default legend;
+export default Legend;
 
