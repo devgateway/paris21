@@ -7,10 +7,12 @@ import Structures from '../../stores/structures';
 import { loadRegions } from '../../actions/regions';
 import Regions from '../../stores/regions';
 import PrimaryGri from '../../stores/indicators';
-import ClusteredWaterpoints from '../leaflet/clustered-points';
+import MarkerCluster from '../leaflet/MarkerCluster';
 import Legend from './legend';
 
 require('stylesheets/map/map');
+require('stylesheets/leaflet/MarkerCluster');
+require('stylesheets/leaflet/MarkerCluster.Default');
 
 const MainMap = React.createClass({
   mixins: [
@@ -51,7 +53,11 @@ const MainMap = React.createClass({
                bounds={[[16.00, -21.13], [12.76, -10.43]]}
                className="leaflet-map">
                 <TileLayer url="//{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
-                <ClusteredWaterpoints points={this.state.structures}/>
+                <MarkerCluster 
+                  focusMarker={this.props.focusMarker}
+                  markers= {this.props.markers}
+                  newMarkerData={this.state.structures}
+                  updateMarkers={this.props.updateMarkers}/>
                 {primaryGriData}
                 <Legend/>
            </BoundsMap>
