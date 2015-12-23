@@ -17,7 +17,7 @@ const allTranslations = {
     'lang.fr': 'Français',
     'footer.years': 'Select Year',
     'footer.indicator': 'Select an Indicator',
-    
+
     'indicator.primary.GIR.total': 'Primary GIR Total',
     'indicator.primary.GIR.boys': 'Primary GIR Boys',
     'indicator.primary.GIR.girls': 'Primary GIR Girls',
@@ -34,7 +34,6 @@ const allTranslations = {
     'indicator.Preschool.TBPS.boys': 'Preschool TBPS Boys',
     'indicator.Preschool.TBPS.girls': 'Preschool TBPS Girls',
 
-    
     'legend.title': 'Legend',
   },
 

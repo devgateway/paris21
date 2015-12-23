@@ -3,7 +3,6 @@ import { connect } from 'reflux';
 import { updateIndicator } from '../../actions/indicators';
 import Indicators from '../../stores/indicators';
 import TChildProps from '../misc/t-set-child-props';
-import T from '../misc/t';
 
 const IndicatorSelector = React.createClass({
 
@@ -46,7 +45,7 @@ const IndicatorSelector = React.createClass({
                 <option value="primary_gir_girls">{{k: 'indicator.primary.GIR.girls'}}</option>
               </TChildProps>
               <TChildProps>
-                <option value="primary_ger_total">{{k: 'indicator.primary.GER.total'}}</option>  
+                <option value="primary_ger_total">{{k: 'indicator.primary.GER.total'}}</option>
               </TChildProps>
               <TChildProps>
                 <option value="primary_ger_boys">{{k: 'indicator.primary.GER.boys'}}</option>
