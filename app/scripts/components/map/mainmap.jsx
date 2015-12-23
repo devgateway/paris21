@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { PropTypes } from 'react';
 import { TileLayer, GeoJson } from 'react-leaflet';
 import { connect } from 'reflux';
 import BoundsMap from '../leaflet/bounds-map';
@@ -23,6 +23,10 @@ const MainMap = React.createClass({
   componentWillMount() {
     load();
     loadRegions();
+  },
+
+  PropTypes: {
+    newMarkerData: PropTypes.array.isRequired,
   },
 
   render() {
@@ -53,11 +57,7 @@ const MainMap = React.createClass({
                bounds={[[16.00, -21.13], [12.76, -10.43]]}
                className="leaflet-map">
                 <TileLayer url="//{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
-                <MarkerCluster 
-                  focusMarker={this.props.focusMarker}
-                  markers= {this.props.markers}
-                  newMarkerData={this.state.structures}
-                  updateMarkers={this.props.updateMarkers}/>
+                <MarkerCluster newMarkerData = {this.state.structures}/>
                 {primaryGriData}
                 <Legend/>
            </BoundsMap>

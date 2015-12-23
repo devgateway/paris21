@@ -1,5 +1,3 @@
-'use strict';
-
 import React from 'react';
 import Leaflet from 'leaflet';
 import MarkerPopup from './MarkerPopup';
@@ -19,15 +17,15 @@ class MarkerCluster extends MapLayer {
 
     // add markers to cluster layer
     if (nextProps.newMarkerData.length > 0 && !isRendered) {
-      let markers = Object.assign({}, this.props.markers);
-      let newMarkers = [];
+      const markers = Object.assign({}, this.props.markers);
+      const newMarkers = [];
 
       nextProps.newMarkerData.forEach((obj) => {
-        let markerPopup = React.renderToStaticMarkup(
+        const markerPopup = React.renderToStaticMarkup(
           <MarkerPopup caption={obj.TITLE}/>
         );
 
-        let leafletMarker = Leaflet.marker(obj.position)
+        const leafletMarker = Leaflet.marker(obj.position)
           .bindPopup(markerPopup, {maxHeight: 350, maxWidth: 250, minWidth: 250})
           .on('click', () => this.props.map.panTo(obj.position));
 
@@ -41,7 +39,7 @@ class MarkerCluster extends MapLayer {
 
     // zoom to particular marker
     if (Object.keys(nextProps.focusMarker).length > 0) {
-      let marker = this.props.markers[nextProps.focusMarker.id];
+      const marker = this.props.markers[nextProps.focusMarker.id];
 
       this.leafletElement.zoomToShowLayer(marker, () => {
         this.props.map.panTo(nextProps.focusMarker.position);
