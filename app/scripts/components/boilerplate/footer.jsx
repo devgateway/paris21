@@ -10,7 +10,7 @@ const Footer = React.createClass({
   render() {
     return (
       <div className="footer">
-         <p ><T k="footer.indicator" /><IndicatorSelector/> <T k="footer.years" /><YearSelector/></p>
+         <p ><T k="footer.indicator" /><IndicatorSelector /> <T k="footer.years"/><YearSelector /></p>
       </div>
     );
   },

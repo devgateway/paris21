@@ -17,21 +17,24 @@ const allTranslations = {
     'lang.fr': 'Français',
     'footer.years': 'Select Year',
     'footer.indicator': 'Select an Indicator',
+    
     'indicator.primary.GIR.total': 'Primary GIR Total',
     'indicator.primary.GIR.boys': 'Primary GIR Boys',
     'indicator.primary.GIR.girls': 'Primary GIR Girls',
+
     'indicator.primary.GER.total': 'Primary GER Total',
     'indicator.primary.GER.boys': 'Primary GER Boys',
     'indicator.primary.GER.girls': 'Primary GER girls',
+
     'indicator.secondary.GER.total': 'Secondary TBS Total',
     'indicator.secondary.GER.boys': 'Secondary TBS Boys',
     'indicator.secondary.GER.girls': 'Secondary TBS Girls',
+
     'indicator.Preschool.TBPS.total': 'Preschool TBPS Total',
     'indicator.Preschool.TBPS.boys': 'Preschool TBPS Boys',
     'indicator.Preschool.TBPS.girls': 'Preschool TBPS Girls',
-    'indicator.secondary.TBPS.total': 'Secondary TBPS Total',
-    'indicator.secondary.TBPS.boys': 'Secondary TBPS Boys',
-    'indicator.secondary.TBPS.girls': 'Secondary TBPS Girls',
+
+    
     'legend.title': 'Legend',
   },
 
@@ -44,21 +47,22 @@ const allTranslations = {
     'lang.fr': 'Français',
     'footer.years': 'Choisir une année',
     'footer.indicator': 'Choisir un indicateur',
+
     'indicator.primary.GIR.total': 'TBA en CI Total',
     'indicator.primary.GIR.boys': 'TBA en CI Garçons',
     'indicator.primary.GIR.girls': 'TBA en CI Filles',
+
     'indicator.primary.GER.total': 'TBS Primaire Total',
     'indicator.primary.GER.boys': 'TBS Primaire Garçons',
     'indicator.primary.GER.girls': 'TBS Primaire Filles',
+
     'indicator.secondary.GER.total': 'TBS Secondaire Total',
     'indicator.secondary.GER.boys': 'TBS Secondaire Garçons',
     'indicator.secondary.GER.girls': 'TBS Secondaire Filles',
+
     'indicator.Preschool.TBPS.total': 'TBPS Total',
     'indicator.Preschool.TBPS.boys': 'TBPS Garçons',
     'indicator.Preschool.TBPS.girls': 'TBPS Filles',
-    'indicator.secondary.TBPS.total': 'Secondaire TBPS Total',
-    'indicator.secondary.TBPS.boys': 'Secondaire TBPS Boys',
-    'indicator.secondary.TBPS.girls': 'Secondaire TBPS Girls',
     'legend.title': 'Légende',
   },
 };
