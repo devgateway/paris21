@@ -1,4 +1,5 @@
 import React from 'react';
+import T from '../misc/t';
 
 require('stylesheets/leaflet/popup');
 
@@ -7,14 +8,14 @@ class MarkerPopup extends React.Component {
     return (
       <div>
         <div>
-        <h3>Project Information</h3>
-          Title : {this.props.title}
+        <h3><T k="popup.header" /></h3>
+          <T k="popup.title"/> : {this.props.title}
           <br/>
-          Donors : {this.props.donors}
+          <T k="popup.donors"/> : {this.props.donors}
           <br/>
-          Total Commmitment : {this.props.commitments} CFA
+          <T k="popup.totalcommitments"/> : {this.props.commitments} CFA
           <br/>
-          Total Disbursement : {this.props.disbursement} CFA
+          <T k="popup.totaldisbursements"/> : {this.props.disbursement} CFA
         </div>
       </div>
     );

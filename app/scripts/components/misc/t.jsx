@@ -35,6 +35,12 @@ const allTranslations = {
     'indicator.Preschool.TBPS.girls': 'Preschool TBPS Girls',
 
     'legend.title': 'Legend',
+
+    'popup.header': 'Project Information',
+    'popup.title': 'Title',
+    'popup.donors': 'Donors',
+    'popup.totalcommitments': 'Total Commitments',
+    'popup.totaldisbursements': 'Total Disbursements',
   },
 
   'fr': {
@@ -63,6 +69,12 @@ const allTranslations = {
     'indicator.Preschool.TBPS.boys': 'TBPS Garçons',
     'indicator.Preschool.TBPS.girls': 'TBPS Filles',
     'legend.title': 'Légende',
+
+    'popup.header': 'Informations sur le projet',
+    'popup.title': 'Titre',
+    'popup.donors': 'Donors',
+    'popup.totalcommitments': 'Total Des Engagements',
+    'popup.totaldisbursements': 'Total Des Décaissements',
   },
 };
 

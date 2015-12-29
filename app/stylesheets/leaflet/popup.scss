@@ -31,14 +31,15 @@
     background: $background-map-overlay;
     border: 3px solid $grey-light;
     box-shadow: $shadow;
-    // height: $popup-width + 50;
     overflow: hidden;
     padding: $base-unit;
     position: relative;
     width: $popup-width;
     z-index: 1;  // needs to be specified >=1 to go above the map
+    width: 400px;
   .leaflet-popup-content {
-    width: 375px;
+    width: 400px;
+    font: 12px/1.5 "Helvetica Neue", Arial, Helvetica, sans-serif;
   }
     h3 {
       color: $theme-blue;
@@ -46,6 +47,9 @@
       margin: 0;
       padding-bottom: 0;
       text-transform: uppercase;
+    }
+    span {
+      font-weight: bold;
     }
   }
 }
