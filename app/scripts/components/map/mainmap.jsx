@@ -4,7 +4,9 @@ import { connect } from 'reflux';
 import BoundsMap from '../leaflet/bounds-map';
 import { load } from '../../actions/structures';
 import Structures from '../../stores/structures';
+import { loadFunding } from '../../actions/fundinginfo';
 import { loadRegions } from '../../actions/regions';
+import FundingInfo from '../../stores/fundinginfo';
 import Regions from '../../stores/regions';
 import PrimaryGri from '../../stores/indicators';
 import MarkerCluster from '../leaflet/MarkerCluster';
@@ -19,20 +21,28 @@ const MainMap = React.createClass({
     connect(Structures, 'structures'),
     connect(Regions, 'regions'),
     connect(PrimaryGri, 'indicators'),
+    connect(FundingInfo, 'fundinginfo'),
   ],
   componentWillMount() {
     load();
     loadRegions();
+    loadFunding();
   },
 
   PropTypes: {
     newMarkerData: PropTypes.array.isRequired,
   },
 
+  onEachFeature(feature, layer) {
+    if (feature.properties && feature.properties.popupContent) {
+      layer.bindPopup(feature.properties.popupContent);
+    }
+  },
+
   render() {
     let primaryGriData = <div/>;
     if (this.state.regions.regions) {
-      primaryGriData = (<GeoJson data = {this.state.regions.regions} map="MainMap"
+      primaryGriData = (<GeoJson data = {this.state.regions.regions} map="MainMap" onEachFeature= {this.onEachFeature}
           style = {
           function(feature) {
             if (feature.style) {

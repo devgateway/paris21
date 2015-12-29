@@ -1,37 +1,31 @@
 import React from 'react';
 
+require('stylesheets/leaflet/popup');
+
 class MarkerPopup extends React.Component {
-  _getStyles() {
-    return {
-      caption: {
-        wordWrap: 'break-word',
-      },
-      img: {
-        display: 'block',
-        margin: 'auto',
-      },
-    };
-  }
-
   render() {
-    const styles = this._getStyles();
-
     return (
       <div>
-        <a href={this.props.profileUrl} >
-          <img src={this.props.imgUrl} style={styles.img} />
-        </a>
-        <br/>
-        <div style={styles.caption}>{this.props.caption}</div>
+        <div>
+        <h3>Project Information</h3>
+          Title : {this.props.title}
+          <br/>
+          Donors : {this.props.donors}
+          <br/>
+          Total Commmitment : {this.props.commitments} CFA
+          <br/>
+          Total Disbursement : {this.props.disbursement} CFA
+        </div>
       </div>
     );
   }
 }
 
 MarkerPopup.propTypes = {
-  caption: React.PropTypes.string,
-  imgUrl: React.PropTypes.string,
-  profileUrl: React.PropTypes.string,
+  commitments: React.PropTypes.string.isRequired,
+  disbursement: React.PropTypes.string.isRequired,
+  donors: React.PropTypes.string.isRequired,
+  title: React.PropTypes.string.isRequired,
 };
 
 export default MarkerPopup;

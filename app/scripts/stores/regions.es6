@@ -5,6 +5,7 @@ import SaneStore from '../utils/sane-store-mixin';
 import { loadRegionsCompleted, setYear} from '../actions/regions';
 import indicatorStore from './indicators';
 import { loadData } from '../actions/indicators';
+import fundingInfoStore from './fundinginfo';
 import { geostats } from '../utils/geostats.js';
 
 let gs;
@@ -24,14 +25,21 @@ function getColor(value) {
  * @param {[Object]} features  [description]
  * @param {[Array]} indicators [description]
  * @param {[intgeger]} year    [description]
+ * @param {[Object]} fundinginfo    [description]
  * @return {[type]}       [description]
  */
-function setStyle(features, indicators, year) {
+function setStyle(features, indicators, year, fundinginfo) {
   const values = [];
   const regions = [];
+  let funding = [];
+
   forEach(indicators.indicators, function(indicator) {
     values.push(parseFloat(indicator[year]));
     regions.push(indicator.REGION);
+  });
+
+  funding = fundinginfo.filter(function(i) {
+    return year.toString() === i.YEAR.toString();
   });
 
   gs = new geostats(values);
@@ -54,6 +62,17 @@ function setStyle(features, indicators, year) {
           dashArray: '3',
           fillOpacity: 0.8,
           fillColor: color};
+        const fundingitem = funding.filter(function(item) {
+          return item.REGION === found;
+        })[0];
+        if (fundingitem) {
+          feature.properties.popupContent = `Region : ${fundingitem.REGION} <BR/>
+          ACTUAL COMMITMENTS : ${fundingitem.ACTUAL_COMMITMENTS} CFA <BR/>
+          ACTUAL DISBURSEMENT : ${fundingitem.ACTUAL_DISBURSEMENT} CFA`;
+
+        } else {
+          feature.properties.popupContent = 'NO DATA';
+        }
       } else {
         feature.style = {
           weight: 2,
@@ -67,6 +86,7 @@ function setStyle(features, indicators, year) {
     features.jenks = jenks;
     features.colors = Colors;
   }
+  //debugger;
   return features;
 }
 
@@ -77,16 +97,26 @@ const RegionsStore = createStore({
     this.listenTo(loadRegionsCompleted, 'loadRegions');
     this.listenTo(setYear, 'updateFeatures');
     this.listenTo(indicatorStore, 'updateFeatures');
+    this.listenTo(fundingInfoStore, 'setFunding');
   },
+
+  setFunding(data) {
+    this.fundinginfo = data;
+  },
+
   updateFeatures(indicators = this.indicators, year = 2010) {
     if (indicators) {
       this.indicators = indicators;
     }
-    const processed = setStyle(this.data.regions, this.indicators, year);
-    /* Force map to remove the initial layer*/
-    this.setData({regions: null});
-    this.setData({regions: processed});
+
+    if (this.indicators && this.fundinginfo) {
+      const processed = setStyle(this.data.regions, this.indicators, year, this.fundinginfo);
+      /* Force map to remove the initial layer*/
+      this.setData({regions: null});
+      this.setData({regions: processed});
+    }
   },
+
   loadRegions(data) {
     this.setData({regions: data});
     loadData();

@@ -19,7 +19,7 @@ const yearSelector = React.createClass({
   change(event) {
     event.preventDefault();
     selectYear(event.target.value);
-    setYear(null, event.target.value);
+    setYear(null,  event.target.value);
   },
 
   render() {

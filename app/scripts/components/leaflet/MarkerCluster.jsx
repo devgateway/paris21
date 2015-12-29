@@ -22,7 +22,11 @@ class MarkerCluster extends MapLayer {
 
       nextProps.newMarkerData.forEach((obj) => {
         const markerPopup = React.renderToStaticMarkup(
-          <MarkerPopup caption={obj.TITLE}/>
+          <MarkerPopup
+              commitments = {obj.TOTAL_COMMITMENTS}
+              disbursement = {obj.TOTAL_DISBURSEMENT}
+              donors = {obj.DONORS}
+              title = {obj.TITLE}/>
         );
 
         const leafletMarker = Leaflet.marker(obj.position)
