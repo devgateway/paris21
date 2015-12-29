@@ -4,6 +4,7 @@ import MarkerPopup from './MarkerPopup';
 import { MapLayer } from 'react-leaflet';
 
 require('leaflet.markercluster');
+require('stylesheets/leaflet/divicon');
 
 let isRendered = false;
 class MarkerCluster extends MapLayer {
@@ -29,7 +30,9 @@ class MarkerCluster extends MapLayer {
               title = {obj.TITLE}/>
         );
 
-        const leafletMarker = Leaflet.marker(obj.position)
+        const divIcon = Leaflet.divIcon({className: 'div-icon'});
+
+        const leafletMarker = Leaflet.marker(obj.position, {icon: divIcon})
           .bindPopup(markerPopup, {maxHeight: 350, maxWidth: 250, minWidth: 250})
           .on('click', () => this.props.map.panTo(obj.position));
 
