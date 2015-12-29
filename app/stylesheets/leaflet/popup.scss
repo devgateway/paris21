@@ -1,0 +1,51 @@
+@import '../config/colours';
+@import '../config/dimensions';
+
+.leaflet-popup-pane {
+  left: 55%;
+  position: absolute;
+  right: 10%;
+  top: 2%;
+
+    .leaflet-popup-close-button {
+      background: $grey-light;
+      color: $theme-blue;
+      display: inline-block;
+      font-weight: bold;
+      height: $base-unit + 0.3;
+      line-height: $base-unit + 0.2;
+      position: absolute;
+      right: $base-unit;
+      text-align: center;
+      top: $base-unit;
+      width: $base-unit + 0.3;
+      z-index: 100
+
+      &:hover {
+        background: $grey-medium;
+        color: $text-inverse;
+        cursor: pointer;
+    }
+  }
+  .leaflet-popup-content-wrapper {
+    background: $background-map-overlay;
+    border: 3px solid $grey-light;
+    box-shadow: $shadow;
+    // height: $popup-width + 50;
+    overflow: hidden;
+    padding: $base-unit;
+    position: relative;
+    width: $popup-width;
+    z-index: 1;  // needs to be specified >=1 to go above the map
+  .leaflet-popup-content {
+    width: 375px;
+  }
+    h3 {
+      color: $theme-blue;
+      font-weight: bold;
+      margin: 0;
+      padding-bottom: 0;
+      text-transform: uppercase;
+    }
+  }
+}
