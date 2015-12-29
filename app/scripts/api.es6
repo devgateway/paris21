@@ -7,7 +7,10 @@ const get = url =>
   fetch(url).then(resp => resp.json());
 
 export const getStructures = () =>
-	get(data('education'));
+	get(data('projects'));
+
+export const getFundingInfo = () =>
+	get(data('fundinginfo'));
 
 export const getIndicator = filename =>
 	get(data(filename));
