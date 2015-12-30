@@ -13,8 +13,6 @@ import MarkerCluster from '../leaflet/MarkerCluster';
 import Legend from './legend';
 
 require('stylesheets/map/map');
-require('stylesheets/leaflet/MarkerCluster');
-require('stylesheets/leaflet/MarkerCluster.Default');
 
 const MainMap = React.createClass({
   mixins: [
@@ -59,7 +57,6 @@ const MainMap = React.createClass({
           }
       }/>);
     }
-
     return (
       <div className="main-map">
         <div className="map-container">
@@ -67,7 +64,7 @@ const MainMap = React.createClass({
                bounds={[[16.00, -21.13], [12.76, -10.43]]}
                className="leaflet-map">
                 <TileLayer url="//{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
-                <MarkerCluster newMarkerData = {this.state.structures}/>
+                <MarkerCluster newMarkerData = {this.state.structures} />
                 {primaryGriData}
                 <Legend/>
            </BoundsMap>

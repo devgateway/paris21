@@ -5,9 +5,11 @@ import { MapLayer } from 'react-leaflet';
 
 require('leaflet.markercluster');
 require('stylesheets/leaflet/divicon');
+require('stylesheets/leaflet/MarkerCluster');
+require('stylesheets/leaflet/MarkerCluster.Default');
 
-let isRendered = false;
 class MarkerCluster extends MapLayer {
+
   componentWillMount() {
     super.componentWillMount();
     this.leafletElement = Leaflet.markerClusterGroup();
@@ -15,9 +17,8 @@ class MarkerCluster extends MapLayer {
 
   componentWillReceiveProps(nextProps) {
     super.componentWillReceiveProps(nextProps);
-
     // add markers to cluster layer
-    if (nextProps.newMarkerData.length > 0 && !isRendered) {
+    if (nextProps.newMarkerData.length > 0 && !nextProps.isRendered) {
       const markers = Object.assign({}, this.props.markers);
       const newMarkers = [];
 
@@ -27,8 +28,7 @@ class MarkerCluster extends MapLayer {
               commitments = {obj.TOTAL_COMMITMENTS}
               disbursement = {obj.TOTAL_DISBURSEMENT}
               donors = {obj.DONORS}
-              title = {obj.TITLE}/>
-        );
+              title = {obj.TITLE}/>);
 
         const divIcon = Leaflet.divIcon({className: 'div-icon'});
 
@@ -40,8 +40,8 @@ class MarkerCluster extends MapLayer {
         newMarkers.push(leafletMarker);
       });
 
+      this.leafletElement.clearLayers();
       this.leafletElement.addLayers(newMarkers);
-      isRendered = true;
     }
 
     // zoom to particular marker

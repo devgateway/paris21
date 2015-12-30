@@ -1,6 +1,6 @@
 import { createStore } from 'reflux';
 import SaneStore from '../utils/sane-store-mixin';
-import { loadProgress, loadCompleted } from '../actions/structures';
+import { filter, loadCompleted } from '../actions/structures';
 
 /**
  * @param {object} record The structure database record
@@ -21,12 +21,24 @@ const StructuresStore = createStore({
   initialData: [],
   mixins: [SaneStore],
   init() {
-    this.listenTo(loadProgress, 'loadData');
     this.listenTo(loadCompleted, 'loadData');
+    this.listenTo(filter, 'filterProjects');
   },
   loadData(data) {
     const processed = data.map(pullLatLng);
-    this.setData(processed);
+    this.unFilteredData = processed;
+    this.setData(this.unFilteredData);
+  },
+  filterProjects(filtered = 'All') {
+    if (filter === 'All') {
+      this.setData(this.unFilteredData);
+    } else {
+      this.data  = this.unFilteredData;
+      const projects = this.data.filter(function(i) {
+        return filtered.toString() === i.SUBSECTOR_1.toString();
+      });
+      this.setData(projects);
+    }
   },
 });
 

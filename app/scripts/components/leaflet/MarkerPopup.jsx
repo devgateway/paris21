@@ -8,14 +8,14 @@ class MarkerPopup extends React.Component {
     return (
       <div>
         <div>
-        <h3><T k="popup.header" /></h3>
-          <T k="popup.title"/> : {this.props.title}
+          <h3><T k="popup.header" /></h3>
+          <T k="popup.title" /> : {this.props.title}
           <br/>
-          <T k="popup.donors"/> : {this.props.donors}
+          <T k="popup.donors" /> : {this.props.donors}
           <br/>
-          <T k="popup.totalcommitments"/> : {this.props.commitments} CFA
+          <T k="popup.totalcommitments" /> : {this.props.commitments} CFA
           <br/>
-          <T k="popup.totaldisbursements"/> : {this.props.disbursement} CFA
+          <T k="popup.totaldisbursements" /> : {this.props.disbursement} CFA
         </div>
       </div>
     );

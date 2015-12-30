@@ -6,6 +6,7 @@ const StructuresActions = createActions({
   loadProgress: {},
   loadCompleted: {},
   loadFailed: {},
+  filter: {},
 });
 
 // SIDE-EFFECT: xhr request is triggered on StructuresActions.load()
