@@ -30,7 +30,7 @@ const StructuresStore = createStore({
     this.setData(this.unFilteredData);
   },
   filterProjects(filtered = 'All') {
-    if (filter === 'All') {
+    if (filtered === 'All') {
       this.setData(this.unFilteredData);
     } else {
       this.data  = this.unFilteredData;
