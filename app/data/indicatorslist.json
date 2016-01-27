@@ -1,0 +1,74 @@
+[
+  {
+    "name": "Primary GIR Total",
+    "namefr": "TBA en CI Total",
+    "key": "Primary",
+    "value": "primary_gir_total"
+  },
+  {
+    "name": "Primary GIR Boys",
+    "namefr": "TBA en CI Garçons",
+    "key": "Primary",
+    "value": "primary_gir_boys"
+  },
+  {
+    "name": "Primary GIR Girls",
+    "namefr": "TBA en CI Filles",
+    "key": "Primary",
+    "value": "primary_gir_girls"
+  }, 
+  {
+    "name": "Primary GER Total",
+    "namefr": "TBS Primaire Total",
+    "key": "Primary",
+    "value": "primary_ger_total"
+  },
+  {
+    "name": "Primary GER Boys",
+    "namefr": "TBS Primaire Garçons",
+    "key": "Primary",
+    "value": "primary_ger_boys"
+  },
+  {
+    "name": "Primary GER girls",
+    "namefr": "TBS Primaire Filles",
+    "key": "Primary",
+    "value": "primary_ger_girls"
+  },
+  {
+    "name": "Secondary TBS Total",
+    "namefr": "TBS Secondaire Total",
+    "key": "Secondary",
+    "value": "secondary_ger_total"
+  },
+  {
+    "name": "Secondary TBS Boys",
+    "namefr": "TBS Secondaire Garçons",
+    "key": "Secondary",
+    "value": "secondary_ger_boys"
+  },
+  {
+    "name": "Secondary TBS Girls",
+    "namefr": "TBS Secondaire Filles",
+    "key": "Secondary",
+    "value": "secondary_ger_girls"
+  },
+  {
+    "name": "Preschool TBPS Total",
+    "namefr": "TBPS Total",
+    "key": "Preschool",
+    "value": "presc_tbps_total"
+  },
+  {
+    "name": "Preschool TBPS Boys",
+    "namefr": "TBPS Garçons",
+    "key": "Preschool",
+    "value": "presc_tbps_boys"
+  },
+  {
+    "name": "Preschool TBPS Girls",
+    "namefr": "TBPS Filles",
+    "key": "Preschool",
+    "value": "presc_tbps_girls"
+  }
+ ]

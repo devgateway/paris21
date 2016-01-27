@@ -15,5 +15,8 @@ export const getFundingInfo = () =>
 export const getIndicator = filename =>
 	get(data(filename));
 
+export const getIndicatorList = () =>
+	get(data('indicatorslist'));
+
 export const getRegions = () =>
 	get(layers('sen_regions'));
