@@ -2,7 +2,9 @@ import React, { PropTypes } from 'react';
 import { TileLayer, GeoJson } from 'react-leaflet';
 import { connect } from 'reflux';
 import BoundsMap from '../leaflet/bounds-map';
-import { load } from '../../actions/structures';
+import { load } from '../../actions/projects';
+import Projects from '../../stores/projects';
+import { load as loadstructures} from '../../actions/structures';
 import Structures from '../../stores/structures';
 import { loadFunding } from '../../actions/fundinginfo';
 import { loadRegions } from '../../actions/regions';
@@ -16,15 +18,17 @@ require('stylesheets/map/map');
 
 const MainMap = React.createClass({
   mixins: [
-    connect(Structures, 'structures'),
+    connect(Projects, 'projects'),
     connect(Regions, 'regions'),
     connect(PrimaryGri, 'indicators'),
     connect(FundingInfo, 'fundinginfo'),
+    connect(Structures, 'structures'),
   ],
   componentWillMount() {
     load();
     loadRegions();
     loadFunding();
+    loadstructures();
   },
 
   PropTypes: {
@@ -64,7 +68,7 @@ const MainMap = React.createClass({
                bounds={[[16.00, -21.13], [12.76, -10.43]]}
                className="leaflet-map">
                 <TileLayer url="//{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
-                <MarkerCluster newMarkerData = {this.state.structures} />
+                <MarkerCluster newMarkerData = {this.state.projects} />
                 {primaryGriData}
                 <Legend/>
            </BoundsMap>

@@ -7,6 +7,9 @@ const get = url =>
   fetch(url).then(resp => resp.json());
 
 export const getStructures = () =>
+	get(data('structures'));
+
+export const getProjects = () =>
 	get(data('projects'));
 
 export const getFundingInfo = () =>

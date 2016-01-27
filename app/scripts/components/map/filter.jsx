@@ -1,12 +1,12 @@
 import React from 'react';
 import { connect } from 'reflux';
-import { filter } from '../../actions/structures';
-import Structures from '../../stores/structures';
+import { filter } from '../../actions/projects';
+import Projects from '../../stores/projects';
 
 const ProjectFilter = React.createClass({
 
   mixins: [
-    connect(Structures, 'structures'),
+    connect(Projects, 'projects'),
   ],
 
   getInitialState() {
