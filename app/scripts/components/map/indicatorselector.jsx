@@ -2,7 +2,6 @@ import React from 'react';
 import { connect } from 'reflux';
 import { updateIndicator } from '../../actions/indicators';
 import Indicators from '../../stores/indicators';
-import TChildProps from '../misc/t-set-child-props';
 import IndicatorsList from '../../stores/indicatorslist';
 import { loadData } from '../../actions/indicatorslist';
 

@@ -1,7 +1,6 @@
 import { createActions } from 'reflux';
 import { getIndicatorList } from '../api';
 
-let INDICATOR_NAME = '';
 const indicatorsListActions = createActions({
   loadData: {},
   loadProgress: {},
