@@ -1,7 +1,10 @@
-import React from 'react';
+import React, { PropTypes } from 'react';
 import showStructures from  '../../actions/showstructures';
 
 const StructuresSelector = React.createClass({
+  propTypes: {
+    status: PropTypes.boolean,
+  },
 
   componentDidMount() {
     this.props.status = false;
@@ -13,7 +16,7 @@ const StructuresSelector = React.createClass({
   },
 
   render() {
-    return (<input type="checkbox" value="false" name="showstructures" onChange={this.change}/>);
+    return (<input name="showstructures" onChange={this.change} type="checkbox" value="false" />);
   },
 });
 

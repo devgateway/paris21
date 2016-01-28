@@ -10,7 +10,7 @@ const showStructuresStore = createStore({
     this.listenTo(showStructures, 'setVisible');
   },
   setVisible(arg = false) {
-  	this.setData(arg);
+    this.setData(arg);
   },
 });
 
