@@ -18,6 +18,7 @@ const allTranslations = {
     'footer.years': 'Select Year',
     'footer.indicator': 'Select an Indicator',
     'footer.filter': 'Filter',
+    'footer.showstructures': 'Show Structures',
 
     'indicator.primary.GIR.total': 'Primary GIR Total',
     'indicator.primary.GIR.boys': 'Primary GIR Boys',
@@ -54,6 +55,7 @@ const allTranslations = {
     'footer.years': 'Choisir une année',
     'footer.indicator': 'Choisir un indicateur',
     'footer.filter': 'Filtre',
+    'footer.showstructures': 'Voir Les structures',
 
     'indicator.primary.GIR.total': 'TBA en CI Total',
     'indicator.primary.GIR.boys': 'TBA en CI Garçons',

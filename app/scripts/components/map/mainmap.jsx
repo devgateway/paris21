@@ -11,6 +11,7 @@ import { loadRegions } from '../../actions/regions';
 import FundingInfo from '../../stores/fundinginfo';
 import Regions from '../../stores/regions';
 import PrimaryGri from '../../stores/indicators';
+import ShowStructures from '../../stores/showstructures';
 import MarkerCluster from '../leaflet/MarkerCluster';
 import Legend from './legend';
 
@@ -23,6 +24,7 @@ const MainMap = React.createClass({
     connect(PrimaryGri, 'indicators'),
     connect(FundingInfo, 'fundinginfo'),
     connect(Structures, 'structures'),
+    connect(ShowStructures, 'showstructures'),
   ],
   componentWillMount() {
     load();
@@ -61,6 +63,12 @@ const MainMap = React.createClass({
           }
       }/>);
     }
+    let Cluster = null;
+    if (this.state.showstructures) {
+      Cluster = (<MarkerCluster newMarkerData = {this.state.structures} />);
+    } else {
+      Cluster = (<MarkerCluster newMarkerData = {this.state.projects} />);
+    }
     return (
       <div className="main-map">
         <div className="map-container">
@@ -68,7 +76,7 @@ const MainMap = React.createClass({
                bounds={[[16.00, -21.13], [12.76, -10.43]]}
                className="leaflet-map">
                 <TileLayer url="//{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
-                <MarkerCluster newMarkerData = {this.state.projects} />
+                {Cluster}
                 {primaryGriData}
                 <Legend/>
            </BoundsMap>

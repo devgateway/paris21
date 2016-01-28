@@ -27,6 +27,7 @@ function getList(data, lang) {
   return result;
 }
 
+
 const IndicatorsList = createStore({
   initialData: [],
   mixins: [SaneStore],
