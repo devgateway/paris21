@@ -50,14 +50,14 @@ function setStyle(features, indicators, year, fundinginfo) {
       let index;
       const found = find(regions, function(item, key) {
         index = key;
-        return (item === feature.properties.NAME_1);
+        return (item === feature.properties.ADM2_NAME.toUpperCase());
       });
 
       if (found) {
         const color = getColor(values[index]);
         feature.style = {
           weight: 2,
-          opacity: 0.1,
+          opacity: 0.5,
           color: 'white',
           dashArray: '3',
           fillOpacity: 0.8,
@@ -81,6 +81,7 @@ function setStyle(features, indicators, year, fundinginfo) {
           dashArray: '3',
           fillOpacity: 1,
           fillColor: '#7a859c'};
+        //console.log(feature.properties.ADM2_NAME + ' not found');
       }
     });
     features.jenks = jenks;
@@ -104,7 +105,7 @@ const RegionsStore = createStore({
     this.fundinginfo = data;
   },
 
-  updateFeatures(indicators = this.indicators, year = 2010) {
+  updateFeatures(indicators = this.indicators, year = 2011) {
     if (indicators) {
       this.indicators = indicators;
     }

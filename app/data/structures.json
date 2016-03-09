@@ -96,7 +96,7 @@
     "STATUS":"Active",
     "LATITUDE":12.7068274599755,
     "LONGITUDE":-15.5580139160156,
-    "GEONAME":"Région de Sédhiou"
+    "GEONAME":"Région de SEDHIOU"
   },
   {
     "PROJECT_ID":8727400556,
@@ -294,7 +294,7 @@
     "STATUS":"ACTIVE",
     "LATITUDE":12.5514637080421,
     "LONGITUDE":-12.1758556365967,
-    "GEONAME":"Région de Kédougou"
+    "GEONAME":"Région de KEDOUGOU"
   },
   {
     "PROJECT_ID":872740041,
@@ -349,7 +349,7 @@
     "STATUS":"ACTIVE",
     "LATITUDE":12.5514637080421,
     "LONGITUDE":-12.1758556365967,
-    "GEONAME":"Région de Kédougou"
+    "GEONAME":"Région de KEDOUGOU"
   },
   {
     "PROJECT_ID":8727400447,
@@ -360,7 +360,7 @@
     "STATUS":"ACTIVE",
     "LATITUDE":12.7068274599755,
     "LONGITUDE":-15.5580139160156,
-    "GEONAME":"Région de Sédhiou"
+    "GEONAME":"Région de SEDHIOU"
   },
   {
     "PROJECT_ID":8727400447,
@@ -525,7 +525,7 @@
     "STATUS":"CLOSED",
     "LATITUDE":12.5514637080421,
     "LONGITUDE":-12.1758556365967,
-    "GEONAME":"Région de Kédougou"
+    "GEONAME":"Région de KEDOUGOU"
   },
   {
     "PROJECT_ID":8727431638,
@@ -536,7 +536,7 @@
     "STATUS":"CLOSED",
     "LATITUDE":12.7068274599755,
     "LONGITUDE":-15.5580139160156,
-    "GEONAME":"Région de Sédhiou"
+    "GEONAME":"Région de SEDHIOU"
   },
   {
     "PROJECT_ID":8727431638,
@@ -855,7 +855,7 @@
     "STATUS":"CLOSED",
     "LATITUDE":12.5514637080421,
     "LONGITUDE":-12.1758556365967,
-    "GEONAME":"Région de Kédougou"
+    "GEONAME":"Région de KEDOUGOU"
   },
   {
     "PROJECT_ID":8727466900,
@@ -866,7 +866,7 @@
     "STATUS":"CLOSED",
     "LATITUDE":12.7068274599755,
     "LONGITUDE":-15.5580139160156,
-    "GEONAME":"Région de Sédhiou"
+    "GEONAME":"Région de SEDHIOU"
   },
   {
     "PROJECT_ID":8727466900,
@@ -943,7 +943,7 @@
     "STATUS":null,
     "LATITUDE":12.5514637080421,
     "LONGITUDE":-12.1758556365967,
-    "GEONAME":"Région de Kédougou"
+    "GEONAME":"Région de KEDOUGOU"
   },
   {
     "PROJECT_ID":872740071,
@@ -954,7 +954,7 @@
     "STATUS":null,
     "LATITUDE":12.7068274599755,
     "LONGITUDE":-15.5580139160156,
-    "GEONAME":"Région de Sédhiou"
+    "GEONAME":"Région de SEDHIOU"
   },
   {
     "PROJECT_ID":872740071,
@@ -1053,7 +1053,7 @@
     "STATUS":null,
     "LATITUDE":12.5514637080421,
     "LONGITUDE":-12.1758556365967,
-    "GEONAME":"Région de Kédougou"
+    "GEONAME":"Région de KEDOUGOU"
   },
   {
     "PROJECT_ID":8727400423,
@@ -1141,7 +1141,7 @@
     "STATUS":null,
     "LATITUDE":12.5514637080421,
     "LONGITUDE":-12.1758556365967,
-    "GEONAME":"Région de Kédougou"
+    "GEONAME":"Région de KEDOUGOU"
   },
   {
     "PROJECT_ID":8727400423,
@@ -1152,7 +1152,7 @@
     "STATUS":null,
     "LATITUDE":12.7068274599755,
     "LONGITUDE":-15.5580139160156,
-    "GEONAME":"Région de Sédhiou"
+    "GEONAME":"Région de SEDHIOU"
   },
   {
     "PROJECT_ID":8727400423,
@@ -1878,7 +1878,7 @@
     "STATUS":"ACTIVE",
     "LATITUDE":12.55146,
     "LONGITUDE":-12.17586,
-    "GEONAME":"Région de Kédougou"
+    "GEONAME":"Région de KEDOUGOU"
   },
   {
     "PROJECT_ID":8727414976,
@@ -1889,7 +1889,7 @@
     "STATUS":"ACTIVE",
     "LATITUDE":12.70683,
     "LONGITUDE":-15.55801,
-    "GEONAME":"Région de Sédhiou"
+    "GEONAME":"Région de SEDHIOU"
   },
   {
     "PROJECT_ID":8727414976,
@@ -2241,7 +2241,7 @@
     "STATUS":"ACTIVE",
     "LATITUDE":12.5579,
     "LONGITUDE":-12.1743,
-    "GEONAME":"Kédougou"
+    "GEONAME":"KEDOUGOU"
   },
   {
     "PROJECT_ID":8727432484,
@@ -2274,7 +2274,7 @@
     "STATUS":"ACTIVE",
     "LATITUDE":12.75,
     "LONGITUDE":-15.5,
-    "GEONAME":"Sédhiou"
+    "GEONAME":"SEDHIOU"
   },
   {
     "PROJECT_ID":8727432487,
@@ -2285,7 +2285,7 @@
     "STATUS":"ACTIVE",
     "LATITUDE":12.5579,
     "LONGITUDE":-12.1743,
-    "GEONAME":"Kédougou"
+    "GEONAME":"KEDOUGOU"
   },
   {
     "PROJECT_ID":8727432488,
@@ -2340,7 +2340,7 @@
     "STATUS":"ACTIVE",
     "LATITUDE":12.5579,
     "LONGITUDE":-12.1743,
-    "GEONAME":"Kédougou"
+    "GEONAME":"KEDOUGOU"
   },
   {
     "PROJECT_ID":8727432493,
@@ -2483,7 +2483,7 @@
     "STATUS":"ACTIVE",
     "LATITUDE":12.70683,
     "LONGITUDE":-15.55801,
-    "GEONAME":"Région de Sédhiou"
+    "GEONAME":"Région de SEDHIOU"
   },
   {
     "PROJECT_ID":8727422995,
@@ -2538,7 +2538,7 @@
     "STATUS":"ACTIVE",
     "LATITUDE":12.6285,
     "LONGITUDE":-12.8166,
-    "GEONAME":"Salémata"
+    "GEONAME":"SALEMATA"
   },
   {
     "PROJECT_ID":8727432556,
@@ -2604,7 +2604,7 @@
     "STATUS":"ACTIVE",
     "LATITUDE":12.55146,
     "LONGITUDE":-12.17586,
-    "GEONAME":"Région de Kédougou"
+    "GEONAME":"Région de KEDOUGOU"
   },
   {
     "PROJECT_ID":8727414908,
@@ -2813,7 +2813,7 @@
     "STATUS":"ACTIVE",
     "LATITUDE":12.55146,
     "LONGITUDE":-12.17586,
-    "GEONAME":"Région de Kédougou"
+    "GEONAME":"Région de KEDOUGOU"
   },
   {
     "PROJECT_ID":87274221065,
@@ -2824,7 +2824,7 @@
     "STATUS":"ACTIVE",
     "LATITUDE":12.70683,
     "LONGITUDE":-15.55801,
-    "GEONAME":"Région de Sédhiou"
+    "GEONAME":"Région de SEDHIOU"
   },
   {
     "PROJECT_ID":87274221065,
@@ -3969,7 +3969,7 @@
     "LATITUDE":12.55146,
     "LONGITUDE":-12.17586,
     "GEONAME_ID":7303936,
-    "GEONAME":"Région de Kédougou"
+    "GEONAME":"Région de KEDOUGOU"
   },
   {
     "PROJECT_ID":87274221074,
@@ -3981,7 +3981,7 @@
     "LATITUDE":12.70683,
     "LONGITUDE":-15.55801,
     "GEONAME_ID":7303937,
-    "GEONAME":"Région de Sédhiou"
+    "GEONAME":"Région de SEDHIOU"
   },
   {
     "PROJECT_ID":87274221074,
@@ -4137,7 +4137,7 @@
     "LATITUDE":12.55146,
     "LONGITUDE":-12.17586,
     "GEONAME_ID":7303936,
-    "GEONAME":"Région de Kédougou"
+    "GEONAME":"Région de KEDOUGOU"
   },
   {
     "PROJECT_ID":8727400550,
@@ -4149,7 +4149,7 @@
     "LATITUDE":12.70683,
     "LONGITUDE":-15.55801,
     "GEONAME_ID":7303937,
-    "GEONAME":"Région de Sédhiou"
+    "GEONAME":"Région de SEDHIOU"
   },
   {
     "PROJECT_ID":8727400550,
@@ -4305,7 +4305,7 @@
     "LATITUDE":12.55146,
     "LONGITUDE":-12.17586,
     "GEONAME_ID":7303936,
-    "GEONAME":"Région de Kédougou"
+    "GEONAME":"Région de KEDOUGOU"
   },
   {
     "PROJECT_ID":87274221075,
@@ -4317,7 +4317,7 @@
     "LATITUDE":12.70683,
     "LONGITUDE":-15.55801,
     "GEONAME_ID":7303937,
-    "GEONAME":"Région de Sédhiou"
+    "GEONAME":"Région de SEDHIOU"
   },
   {
     "PROJECT_ID":87274221075,
@@ -4473,7 +4473,7 @@
     "LATITUDE":12.55146,
     "LONGITUDE":-12.17586,
     "GEONAME_ID":7303936,
-    "GEONAME":"Région de Kédougou"
+    "GEONAME":"Région de KEDOUGOU"
   },
   {
     "PROJECT_ID":8727414979,
@@ -4485,7 +4485,7 @@
     "LATITUDE":12.70683,
     "LONGITUDE":-15.55801,
     "GEONAME_ID":7303937,
-    "GEONAME":"Région de Sédhiou"
+    "GEONAME":"Région de SEDHIOU"
   },
   {
     "PROJECT_ID":8727414979,
@@ -4689,7 +4689,7 @@
     "LATITUDE":12.55146,
     "LONGITUDE":-12.17586,
     "GEONAME_ID":7303936,
-    "GEONAME":"Région de Kédougou"
+    "GEONAME":"Région de KEDOUGOU"
   },
   {
     "PROJECT_ID":8727432229,
@@ -4701,7 +4701,7 @@
     "LATITUDE":12.70683,
     "LONGITUDE":-15.55801,
     "GEONAME_ID":7303937,
-    "GEONAME":"Région de Sédhiou"
+    "GEONAME":"Région de SEDHIOU"
   },
   {
     "PROJECT_ID":8727432229,
@@ -4881,7 +4881,7 @@
     "LATITUDE":12.55146,
     "LONGITUDE":-12.17586,
     "GEONAME_ID":7303936,
-    "GEONAME":"Région de Kédougou"
+    "GEONAME":"Région de KEDOUGOU"
   },
   {
     "PROJECT_ID":8727451830,
@@ -4893,7 +4893,7 @@
     "LATITUDE":12.70683,
     "LONGITUDE":-15.55801,
     "GEONAME_ID":7303937,
-    "GEONAME":"Région de Sédhiou"
+    "GEONAME":"Région de SEDHIOU"
   },
   {
     "PROJECT_ID":8727451830,
@@ -5049,7 +5049,7 @@
     "LATITUDE":12.55146,
     "LONGITUDE":-12.17586,
     "GEONAME_ID":7303936,
-    "GEONAME":"Région de Kédougou"
+    "GEONAME":"Région de KEDOUGOU"
   },
   {
     "PROJECT_ID":87274221043,
@@ -5061,7 +5061,7 @@
     "LATITUDE":12.70683,
     "LONGITUDE":-15.55801,
     "GEONAME_ID":7303937,
-    "GEONAME":"Région de Sédhiou"
+    "GEONAME":"Région de SEDHIOU"
   },
   {
     "PROJECT_ID":87274221043,
@@ -5205,7 +5205,7 @@
     "LATITUDE":12.70683,
     "LONGITUDE":-15.55801,
     "GEONAME_ID":7303937,
-    "GEONAME":"Région de Sédhiou"
+    "GEONAME":"Région de SEDHIOU"
   },
   {
     "PROJECT_ID":87274221098,
@@ -5281,7 +5281,7 @@
   },
   {
     "PROJECT_ID":8727400211,
-    "TITLE":"PROJET DE CONSTRUCTION DE 3 B�TIMENTS POUR H�BERGEMENT A L'UNIVERSIT� GASTON BERGER DE ST LOUIS",
+    "TITLE":"PROJET DE CONSTRUCTION DE 3 B�TIMENTS POUR H�BERGEMENT A L'UNIVERSIT� GASTON BERGER DE SAINT LOUIS",
     "DONOR":"Government of Senegal",
     "COUNTRY":"Senegal",
     "SECTOR":"EDUCATION",
