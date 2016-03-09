@@ -1,5 +1,24 @@
 [
   {
+    "name": "Primary Schools per 100.000 inhabitants",
+    "namefr": "Les écoles pour 100.000 habitants",
+    "key": "Primary",
+    "value": "primary_sc_habitants",
+    "isPercentage": false
+  },
+  {
+    "name": "Primary Teachers per 100 Students",
+    "namefr": "Teachers per 100 Students",
+    "key": "Primary",
+    "value": "primary_teachers_students"
+  },
+  {
+    "name": "Primary Public expenditure per student",
+    "namefr": "Dépenses publiques par étudiant",
+    "key": "Primary",
+    "value": "primary_expenditure_student"
+  },
+  {
     "name": "Primary GIR Total",
     "namefr": "TBA en CI Total",
     "key": "Primary",
@@ -40,6 +59,18 @@
     "namefr": "TBS Secondaire Total",
     "key": "Secondary",
     "value": "secondary_ger_total"
+  },
+  {
+    "name": "Secondary Schools per 100.000 inhabitants",
+    "namefr": "Les écoles pour 100.000 habitants",
+    "key": "Secondary",
+    "value": "secondary_sc_habitants"
+  },
+  {
+    "name": "Secondary Public expenditure per student",
+    "namefr": "Dépenses publiques par étudiant",
+    "key": "Secondary",
+    "value": "secondary_expenditure_student"
   },
   {
     "name": "Secondary TBS Boys",
