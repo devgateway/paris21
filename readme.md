@@ -7,6 +7,8 @@ Paris21 Prototype
 
 * IOJS >= 3 or NodeJS >= 4
 
+## Demo
+http://devgateway.github.io/paris21
 
 ## Installation
 
