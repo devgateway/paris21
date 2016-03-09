@@ -22,4 +22,4 @@ export const getIndicatorList = () =>
 	get(data('indicatorslist'));
 
 export const getRegions = () =>
-	get(layers('sen_regions'));
+	get(layers('sen_dep'));
