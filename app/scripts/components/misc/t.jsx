@@ -43,6 +43,7 @@ const allTranslations = {
     'popup.donors': 'Donors',
     'popup.totalcommitments': 'Total Commitments',
     'popup.totaldisbursements': 'Total Disbursements',
+    'map.reset': 'Reset zoom',
   },
 
   'fr': {
@@ -79,6 +80,7 @@ const allTranslations = {
     'popup.donors': 'Donors',
     'popup.totalcommitments': 'Total Des Engagements',
     'popup.totaldisbursements': 'Total Des Décaissements',
+    'map.reset': 'Réinitialiser zoom',
   },
 };
 

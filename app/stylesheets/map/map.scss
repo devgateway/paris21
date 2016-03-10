@@ -32,3 +32,25 @@
     background-color: white;
     width: 150px;
 }
+
+.reset {
+  -webkit-border-radius: 5;
+  -moz-border-radius: 5;
+  border-radius: 5px;
+  font-family: Arial;
+  font-weight: border;
+  color: #ffffff;
+  font-size: 14px;
+  background: #d96e34;
+  padding: 10px 15px 10px 15px;
+  border: solid #AD2C11 2px;
+  text-decoration: none;
+  position:absolute;
+  z-index: 1;
+  left: 90%;
+  top: 10%;
+}
+  .reset:hover {
+  background: #fca63c;
+  text-decoration: none;
+}

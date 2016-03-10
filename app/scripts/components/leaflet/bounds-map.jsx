@@ -21,6 +21,7 @@ export default class BoundsMap extends LeafletMap {
       this.leafletElement.fitBounds(this.props.bounds);
     }, 0);
     this.setState({map: this.leafletElement});
+    window.map = this;
   }
 
   componentDidUpdate({ bounds: oldBounds }) {
@@ -37,5 +38,10 @@ export default class BoundsMap extends LeafletMap {
     const nextLLB = Leaflet.latLngBounds(next);
     const prevLLB = Leaflet.latLngBounds(prev);
     return !nextLLB.equals(prevLLB);
+  }
+
+  resetZoom() {
+    const zeroBounds = [[16.00, -21.13], [12.76, -10.43]];
+    this.leafletElement.fitBounds(zeroBounds);
   }
 }
