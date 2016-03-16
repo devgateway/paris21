@@ -71,7 +71,6 @@ const MainMap = React.createClass({
                 weight: 2,
                 opacity: 1,
                 color: 'white',
-                dashArray: '3',
                 fillOpacity: 1,
                 fillColor: '#fee5d9'};
             }
