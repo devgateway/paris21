@@ -10,11 +10,11 @@ const IndicatorsStore = createStore({
     this.listenTo(updateIndicator, 'loadData');
   },
   loadData(data) {
-  	if (data instanceof Array){
-  		data.name = this.name;
-    	this.setData({indicators: data});
+    if (data instanceof Array) {
+      data.name = this.name;
+      this.setData({indicators: data});
     } else {
-    	this.name = data;
+      this.name = data;
     }
   },
 });

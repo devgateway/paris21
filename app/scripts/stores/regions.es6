@@ -9,21 +9,24 @@ import fundingInfoStore from './fundinginfo';
 import { geostats } from '../utils/geostats.js';
 
 let gs;
-let colosSchema= null;
 const colors = {
-  "primary": ["#f1eef6", "#d0d1e6", "#a6bddb", "#74a9cf", "#2b8cbe", "#045a8d"],
-  "scondary": ["#feedde","#fdd0a2","#fdae6b","#fd8d3c","#e6550d","#a63603"],
-  "preschool": ["#fee5d9","#fcbba1","#fc9272","#fb6a4a","#de2d26","#a50f15"],
-  "others": ["#edf8e9","#c7e9c0","#a1d99b","#74c476","#31a354","#006d2c"]
-}
+  'primary': ['#f1eef6', '#d0d1e6', '#a6bddb', '#74a9cf', '#2b8cbe', '#045a8d'],
+  'scondary': ['#feedde', '#fdd0a2', '#fdae6b', '#fd8d3c', '#e6550d', '#a63603'],
+  'preschool': ['#fee5d9', '#fcbba1', '#fc9272', '#fb6a4a', '#de2d26', '#a50f15'],
+  'others': ['#edf8e9', '#c7e9c0', '#a1d99b', '#74c476', '#31a354', '#006d2c'],
+};
 
-
+/**
+ * [selectColorSchema description]
+ * @param  {[type]} name [description]
+ * @return {[type]}      [description]
+ */
 function selectColorSchema(name) {
-  if (name.startsWith("primary")) {
+  if (name.startsWith('primary')) {
     return colors.primary;
-  } else if (name.startsWith("secondary")) {
+  } else if (name.startsWith('secondary')) {
     return colors.scondary;
-  } else if ((name.startsWith("presc"))) {
+  } else if ((name.startsWith('presc'))) {
     return colors.preschool;
   } else {
     return colors.others;
@@ -116,7 +119,6 @@ function setStyle(features, indicators, year, fundinginfo) {
     });
     features.jenks = jenks;
     features.colors = selectColorSchema(indicators.indicators.name);
-    features.indicator.name = indicators.indicators.name;
   }
   //debugger;
   return features;
