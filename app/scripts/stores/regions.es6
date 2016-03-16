@@ -21,6 +21,14 @@ function getColor(value) {
 }
 
 /**
+ * [formaNnumber description]
+ * @param  {[type]} n [description]
+ * @return {[type]}   [description]
+ */
+function formaNnumber(n) {
+  return n.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, '$1,');
+}
+/**
  * [setStyle description]
  * @param {[Object]} features  [description]
  * @param {[Array]} indicators [description]
@@ -59,16 +67,19 @@ function setStyle(features, indicators, year, fundinginfo) {
           weight: 2,
           opacity: 0.5,
           color: 'white',
-          dashArray: '3',
           fillOpacity: 0.8,
           fillColor: color};
         const fundingitem = funding.filter(function(item) {
           return item.REGION === found;
         })[0];
         if (fundingitem) {
-          feature.properties.popupContent = `Region : ${fundingitem.REGION} <BR/>
-          ACTUAL COMMITMENTS : ${fundingitem.ACTUAL_COMMITMENTS} CFA <BR/>
-          ACTUAL DISBURSEMENT : ${fundingitem.ACTUAL_DISBURSEMENT} CFA`;
+          feature.properties.popupContent = `<h3> DEPARTMENT : ${fundingitem.REGION} </h3>
+          <hr></hr>
+          ACTUAL COMMITMENTS : ${formaNnumber(fundingitem.ACTUAL_COMMITMENTS)} CFA <BR/>
+          ACTUAL DISBURSEMENT : ${formaNnumber(fundingitem.ACTUAL_DISBURSEMENT)} CFA <BR/>
+          <hr></hr>
+          TOTAL COMMITMENTS : ${formaNnumber(fundingitem.TOTAL_COMMITMENTS)} CFA <BR/>
+          TOTAL DISBURSEMENT : ${formaNnumber(fundingitem.TOTAL_DISBURSEMENT)} CFA`;
 
         } else {
           feature.properties.popupContent = 'NO DATA';
