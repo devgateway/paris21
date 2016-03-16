@@ -9,15 +9,34 @@ import fundingInfoStore from './fundinginfo';
 import { geostats } from '../utils/geostats.js';
 
 let gs;
-const Colors = ['#f1eef6', '#d0d1e6', '#a6bddb', '#74a9cf', '#2b8cbe', '#045a8d'];
+let colosSchema= null;
+const colors = {
+  "primary": ["#f1eef6", "#d0d1e6", "#a6bddb", "#74a9cf", "#2b8cbe", "#045a8d"],
+  "scondary": ["#feedde","#fdd0a2","#fdae6b","#fd8d3c","#e6550d","#a63603"],
+  "preschool": ["#fee5d9","#fcbba1","#fc9272","#fb6a4a","#de2d26","#a50f15"],
+  "others": ["#edf8e9","#c7e9c0","#a1d99b","#74c476","#31a354","#006d2c"]
+}
 
+
+function selectColorSchema(name) {
+  if (name.startsWith("primary")) {
+    return colors.primary;
+  } else if (name.startsWith("secondary")) {
+    return colors.scondary;
+  } else if ((name.startsWith("presc"))) {
+    return colors.preschool;
+  } else {
+    return colors.others;
+  }
+}
 /**
  * [getColor description]
- * @param  {[intger]} value [description]
- * @return {[integer]}       [returns class color]
+ * @param  {[type]} value [description]
+ * @param  {[type]} name  [description]
+ * @return {[type]}       [description]
  */
-function getColor(value) {
-  return Colors[gs.getClass(value)];
+function getColor(value, name) {
+  return selectColorSchema(name)[gs.getClass(value)];
 }
 
 /**
@@ -62,7 +81,7 @@ function setStyle(features, indicators, year, fundinginfo) {
       });
 
       if (found) {
-        const color = getColor(values[index]);
+        const color = getColor(values[index], indicators.indicators.name);
         feature.style = {
           weight: 2,
           opacity: 0.5,
@@ -96,7 +115,8 @@ function setStyle(features, indicators, year, fundinginfo) {
       }
     });
     features.jenks = jenks;
-    features.colors = Colors;
+    features.colors = selectColorSchema(indicators.indicators.name);
+    features.indicator.name = indicators.indicators.name;
   }
   //debugger;
   return features;
