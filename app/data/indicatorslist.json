@@ -7,8 +7,8 @@
     "isPercentage": false
   },
   {
-    "name": "Primary Teachers per 100 Students",
-    "namefr": "Teachers per 100 Students",
+    "name": "Primary Teachers per 100 students",
+    "namefr": "Teachers per 100 students",
     "key": "Primary",
     "value": "primary_teachers_students"
   },

@@ -119,6 +119,7 @@ function setStyle(features, indicators, year, fundinginfo) {
     });
     features.jenks = jenks;
     features.colors = selectColorSchema(indicators.indicators.name);
+    features.indicator = indicators.indicators.name;
   }
   //debugger;
   return features;

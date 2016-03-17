@@ -12,6 +12,7 @@ import has from 'lodash/object/has';
 function computeData(data) {
   const colors = data.colors;
   const ranges = data.jenks;
+  const indicator = data.indicator
 
   const state = {
     classOne: colors[0],
@@ -27,6 +28,15 @@ function computeData(data) {
     rangeFive: `${ranges[4]} % -  ${ranges[5]} %`,
     rangeSix: `${ranges[5]} % -  ${ranges[6]} %`,
   };
+  /* remove percentage sign when needed */
+  if (indicator.endsWith('student') || indicator.endsWith('habitants') || indicator.endsWith('students')){
+      state.rangeOne = state.rangeOne.replace(new RegExp('%', 'g'), '');
+      state.rangeTwo = state.rangeTwo.replace(new RegExp('%', 'g'), '');
+      state.rangeThree = state.rangeThree.replace(new RegExp('%', 'g'), '');
+      state.rangeFour = state.rangeFour.replace(new RegExp('%', 'g'), '');
+      state.rangeFive = state.rangeFive.replace(new RegExp('%', 'g'), '');
+      state.rangeSix = state.rangeSix.replace(new RegExp('%', 'g'), '');
+  }
   return state;
 }
 
