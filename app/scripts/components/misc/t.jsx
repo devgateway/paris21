@@ -9,8 +9,8 @@ import langStore from '../../stores/lang';
 
 const allTranslations = {
   'en': {
-    'site-name': 'Paris21 Dashboard',
-    'site.flag': 'Paris21',
+    'site-name': 'Senegal Dashboard',
+    'site.flag': 'Senegal',
     'nav.home': 'Home',
     'nav.data': 'Data',
     'lang.en': 'English',
@@ -47,7 +47,7 @@ const allTranslations = {
   },
 
   'fr': {
-    'site-name': 'Tableau de bord Paris21',
+    'site-name': 'Tableau de bord du Sénégal',
     'site.flag': 'Paris21',
     'nav.home': 'Accueil',
     'nav.data': 'Données',
