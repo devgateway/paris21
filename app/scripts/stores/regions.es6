@@ -48,7 +48,11 @@ function getColor(value, name) {
  * @return {[type]}   [description]
  */
 function formaNnumber(n) {
-  return n.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, '$1,');
+  if (n > 0 ) {
+    return n.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, '$1,');
+  } else {
+    return 0;
+  }
 }
 /**
  * [setStyle description]
