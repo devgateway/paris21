@@ -14,6 +14,6 @@ describe('Translator component', () => {
 
   it('should render the translated string', () => {
     const t = React.addons.TestUtils.renderIntoDocument(<T k="site.flag" />);
-    expect(React.findDOMNode(t).textContent).toEqual('Paris21');
+    expect(React.findDOMNode(t).textContent).toEqual('Senegal');
   });
 });

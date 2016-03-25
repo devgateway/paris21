@@ -17,7 +17,7 @@ describe('Translator component wrapper', () => {
     const img = React.addons.TestUtils.findRenderedDOMComponentWithTag(ts, 'img');
     const attrText = React.findDOMNode(img).getAttribute('alt');
     expect(attrText).toBeDefined();
-    expect(attrText).toEqual('Paris21');
+    expect(attrText).toEqual('Senegal');
   });
 
   it('should break for no children', () => {
