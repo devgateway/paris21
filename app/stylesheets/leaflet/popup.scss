@@ -1,45 +1,34 @@
 @import '../config/colours';
 @import '../config/dimensions';
 
+.projectinfo {
+  width: auto;
+  height: auto;
+}
+
 .leaflet-popup-pane {
   left: 55%;
   position: absolute;
   right: 10%;
   top: 2%;
 
-    .leaflet-popup-close-button {
-      background: $grey-light;
-      color: $theme-blue;
-      display: inline-block;
-      font-weight: bold;
-      height: $base-unit + 0.3;
-      line-height: $base-unit + 0.2;
-      position: absolute;
-      right: $base-unit;
-      text-align: center;
-      top: $base-unit;
-      width: $base-unit + 0.3;
-      z-index: 100
-
-      &:hover {
-        background: $grey-medium;
-        color: $text-inverse;
-        cursor: pointer;
-    }
+    
+  .leaflet-popup-scrolled {
+    width: 97%;
   }
   .leaflet-popup-content-wrapper {
     background: $background-map-overlay;
     border: 3px solid $grey-light;
     box-shadow: $shadow;
-    overflow: hidden;
+    overflow: auto;
     padding: $base-unit;
     position: relative;
-    width: $popup-width;
+    width: 97%;
+    height: 97%;
     z-index: 1;  // needs to be specified >=1 to go above the map
-    width: 400px;
+  
   .leaflet-popup-content {
-    width: 400px;
-    font: 12px/1.5 "Helvetica Neue", Arial, Helvetica, sans-serif;
+    width: 350px;
   }
     h3 {
       color: $theme-blue;

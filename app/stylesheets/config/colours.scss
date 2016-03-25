@@ -39,6 +39,16 @@ $shadow-color: hsla(0, 0%, 0%, 0.1);
 $shadow: 0 $shadow-size/1.5 $shadow-size $shadow-color;
 $shadow-inset: 0 $shadow-size $shadow-size (-$shadow-size) $shadow-color inset;
 
+// dashboard filters
+$track-height: 8px;
+$track-width: 60%;
+$handle-height: 16px;
+$handle-width: 16px;
+$handle-radius: 50%;
+$grabby-height: 11px;
+$grabby-width: 2px;
+$grabby-center-off: 2px;
+
 //legend colors
 
 

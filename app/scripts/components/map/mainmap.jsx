@@ -81,9 +81,9 @@ const MainMap = React.createClass({
     let resetZoom = null;
 
     if (this.state.showstructures) {
-      Cluster = (<MarkerCluster newMarkerData = {this.state.structures} />);
+      Cluster = (<MarkerCluster newMarkerData = {this.state.structures} type="structure"/>);
     } else {
-      Cluster = (<MarkerCluster newMarkerData = {this.state.projects} />);
+      Cluster = (<MarkerCluster newMarkerData = {this.state.projects} type="point"/>);
     }
     if (this.state.resetzoom) {
       resetZoom = (<div className= "reset" id="reset-div" onClick={this.resetMap}><T k="map.reset" /></div>);

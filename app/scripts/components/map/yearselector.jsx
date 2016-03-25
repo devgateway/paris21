@@ -25,6 +25,7 @@ const yearSelector = React.createClass({
   render() {
     return (
          <select className="selectable" id="year" onChange={this.change} value={this.state.years}>
+              <option value="all">All</option>
               <option value="2011">2011</option>
               <option value="2012">2012</option>
               <option value="2013">2013</option>

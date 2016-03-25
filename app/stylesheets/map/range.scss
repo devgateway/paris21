@@ -1,0 +1,51 @@
+@import '../config/colours';
+@import '../config/pseudo';
+@import '../config/type';
+@import '../config/box';
+@import '../config/dimensions';
+
+.range {
+  margin-bottom: $base-unit;
+
+  .number {
+    color: $grey-medium;
+    display: inline-block;
+    font-size: $medium-number - 6;
+    font-weight: normal;
+    margin: 0;
+  }
+
+  .slider {
+    background: $bg-color;
+    display: inline-block;
+    height: $track-height;
+    margin: 0 $general-content-padding/3;
+    width: $track-width;
+
+    .bar-1 {
+      background: $grey-light;
+      height: $track-height;
+    }
+
+    .handle {
+      background: $theme-blue;
+      border: 1px solid $theme-blue-light;
+      border-radius: $handle-radius;
+      cursor: pointer;
+      height: $handle-height;
+      margin-top: -($handle-height - $track-height) / 1.5;
+      position: relative;
+      width: $handle-width;
+
+      &:before {
+        margin-left: -$grabby-center-off;
+        right: 50%;
+      }
+
+      &:after {
+        left: 45%;
+        margin-left: $grabby-center-off;
+      }
+    }
+  }
+}
