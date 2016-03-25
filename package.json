@@ -75,7 +75,6 @@
     "style-loader": "0.12.4",
     "webpack": "1.12.1",
     "webpack-dev-server": "1.11.0",
-    "slack-notify": "0.1.4",
     "react-dom": "0.14.0",
     "gulp-clean": "0.3.1",
     "gulp-gh-pages": "0.5.4"
@@ -88,7 +87,6 @@
     "lodash": "3.10.1",
     "object-assign": "4.0.1",
     "react": "0.13.3",
-    "react-d3": "0.4.0",
     "react-font-awesome": "https://github.com/janmyler/react-font-awesome/tarball/261c1719581e9125a544f8b5b9efc2e27073d970",
     "react-leaflet": "0.7.0",
     "react-slider": "0.5.1",
