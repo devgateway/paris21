@@ -31,11 +31,7 @@ const StructuresStore = createStore({
     this.setData(this.unFilteredData);
   },
 
-  /**
-   * [setStructures description]
-   * @param {[type]} data [description]
-   * @return {[Json Array]} [a set of filtered structures based on projects]
-   */
+
   setStructures(data) {
     if (this.unFilteredData) {
       const structures = this.unFilteredData.filter(function(i) {
