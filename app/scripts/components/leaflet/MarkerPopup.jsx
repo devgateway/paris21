@@ -5,9 +5,16 @@ require('stylesheets/leaflet/popup');
 
 class MarkerPopup extends React.Component {
   render() {
-    return (
-      <div className = "projectinfo">
-        <div>
+    let popup;
+    if (this.props.type === 'structure') {
+      popup = (<div>
+          <h3><T k="popup.header" /></h3>
+          <T k="popup.title" /> : {this.props.title}
+          <hr></hr>
+          <T k="popup.donors" /> : {this.props.donors}
+        </div>);
+    } else {
+      popup = (<div>
           <h3><T k="popup.header" /></h3>
           <T k="popup.title" /> : {this.props.title}
           <hr></hr>
@@ -24,7 +31,11 @@ class MarkerPopup extends React.Component {
           <T k="popup.totalcommitments" /> : {this.props.commitments} CFA
           <br/>
           <T k="popup.totaldisbursements" /> : {this.props.disbursement} CFA
-        </div>
+        </div>);
+    }
+    return (
+      <div className = "projectinfo">
+        {popup}
       </div>
     );
   }
@@ -39,6 +50,7 @@ MarkerPopup.propTypes = {
   sector: React.PropTypes.string.isRequired,
   startdate: React.PropTypes.string.isRequired,
   title: React.PropTypes.string.isRequired,
+  type: React.PropTypes.string.isRequired,
 };
 
 export default MarkerPopup;
