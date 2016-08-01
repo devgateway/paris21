@@ -1,7 +1,7 @@
 import { createStore } from 'reflux';
 import SaneStore from '../utils/sane-store-mixin';
-import { filter, loadCompleted } from '../actions/structures';
-
+import { loadCompleted } from '../actions/structures';
+import ProjectsStore from './projects';
 /**
  * @param {object} record The structure database record
  * @returns {object} The record with a `position` prop with lat/lng array
@@ -22,22 +22,22 @@ const StructuresStore = createStore({
   mixins: [SaneStore],
   init() {
     this.listenTo(loadCompleted, 'loadData');
-    this.listenTo(filter, 'filterProjects');
+    this.listenTo(ProjectsStore, 'setStructures');
   },
+
   loadData(data) {
     const processed = data.map(pullLatLng);
     this.unFilteredData = processed;
     this.setData(this.unFilteredData);
   },
-  filterProjects(filtered = 'All') {
-    if (filtered === 'All') {
-      this.setData(this.unFilteredData);
-    } else {
-      this.data  = this.unFilteredData;
-      const projects = this.data.filter(function(i) {
-        return filtered.toString() === i.SUBSECTOR_1.toString();
+
+
+  setStructures(data) {
+    if (this.unFilteredData) {
+      const structures = this.unFilteredData.filter(function(i) {
+        return (data.find(x => i.PROJECT_ID === x.ID));
       });
-      this.setData(projects);
+      this.setData(structures);
     }
   },
 });

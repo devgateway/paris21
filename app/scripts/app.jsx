@@ -1,6 +1,7 @@
 /* eslint react/jsx-sort-props: 0 */  // Routes: path, component order is nicer
 import React from 'react';
 import Router, {Route, IndexRoute} from 'react-router';
+import 'babel-core/polyfill';
 
 import Root from './components/root.jsx';
 import NotFound from './components/static/not-found.jsx';

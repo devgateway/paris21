@@ -28,7 +28,8 @@ class MarkerCluster extends MapLayer {
           markerPopup = React.renderToStaticMarkup(
           <MarkerPopup
               donors = {obj.DONOR}
-              title = {obj.TITLE}/>);
+              title = {obj.TITLE}
+              type = {'structure'}/>);
           divIcon = Leaflet.icon({
             iconUrl: 'images/school.png',
             iconSize: [29, 34], // size of the icon
@@ -44,7 +45,8 @@ class MarkerCluster extends MapLayer {
               enddate = {obj.END_DATE}
               sector = {obj.SECTORS}
               startdate = {obj.START_DATE}
-              title = {obj.TITLE}/>);
+              title = {obj.TITLE}
+              type = {'project'}/>);
           divIcon = Leaflet.icon({
             iconUrl: 'images/project.png',
             iconSize: [28, 28], // size of the icon

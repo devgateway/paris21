@@ -1,4 +1,5 @@
 /* eslint camelcase: 0 */  // snake_case query params are not set by us
+require('es6-promise').polyfill();
 
 const layers = q => `layers/${q}.json`;
 const  data = q => `data/${q}.json`;
