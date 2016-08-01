@@ -11,7 +11,12 @@ require('stylesheets/leaflet/MarkerCluster.Default');
 class MarkerCluster extends MapLayer {
   componentWillMount() {
     super.componentWillMount();
-    this.leafletElement = Leaflet.markerClusterGroup();
+    this.leafletElement = Leaflet.markerClusterGroup({
+        spiderfyOnMaxZoom: true,
+        showCoverageOnHover: false,
+        zoomToBoundsOnClick: true,
+        animateAddingMarkers: true
+      });
   }
 
   componentWillReceiveProps(nextProps) {
