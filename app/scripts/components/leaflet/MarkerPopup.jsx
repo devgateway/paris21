@@ -24,6 +24,10 @@ class MarkerPopup extends React.Component {
           <T k="popup.totalcommitments" /> : {this.props.commitments} CFA
           <br/>
           <T k="popup.totaldisbursements" /> : {this.props.disbursement} CFA
+          <br/>
+          <br/>
+          <a href={`http://pgfe.finances.gouv.sn/aim/viewActivityPreview.do~public=true~pageId=2~activityId=${this.props.ampid}`}>More Information</a>
+          <br/>
         </div>
       </div>
     );
@@ -31,6 +35,7 @@ class MarkerPopup extends React.Component {
 }
 
 MarkerPopup.propTypes = {
+  ampid: React.PropTypes.string.isRequired,
   commitments: React.PropTypes.string.isRequired,
   description: React.PropTypes.string.isRequired,
   disbursement: React.PropTypes.string.isRequired,

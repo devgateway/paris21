@@ -36,6 +36,7 @@ class MarkerCluster extends MapLayer {
         } else {
           markerPopup = React.renderToStaticMarkup(
           <MarkerPopup
+              ampid = {obj.ACTIVITYID}
               commitments = {this.formaNnumber(obj.TOTAL_COMMITMENTS)}
               description = {obj.DESCRIPTION}
               disbursement = {this.formaNnumber(obj.TOTAL_DISBURSEMENT)}
